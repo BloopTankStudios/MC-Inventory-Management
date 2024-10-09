@@ -1,0 +1,23 @@
+{
+"values": [
+"mud",
+"dirt",
+"cobblestone",
+"stone",
+"stone_bricks",
+"cobbled_deepslate",
+"deepslate_bricks",
+"deepslate_tiles",
+"sandstone",
+"red_sandstone",
+"nether_bricks",
+"basalt",
+"polished_blackstone_bricks",
+"quartz_block",
+"grass_block",
+"podzol",
+"mycelium",
+"carved_pumpkin",
+"wet_sponge"
+]
+}

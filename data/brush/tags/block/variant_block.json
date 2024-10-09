@@ -1,0 +1,12 @@
+{
+    "values": [
+        "#brush:brush_variant_block",
+        "#brush:water_variant_block",
+        "#brush:fire_variant_block",
+        "#brush:honeycomb_variant_block",
+        "#brush:pickaxe_variant_block",
+        "#brush:dyable_variant_block",
+        "#brush:stonecutter_variant_block",
+        "#brush:custom_variant_block"
+    ]
+}

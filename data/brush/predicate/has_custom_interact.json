@@ -1,0 +1,61 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {
+            "weapon.*": {
+              "items": "minecraft:debug_stick"
+            }
+          }
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {
+            "weapon.*": {
+              "items": "minecraft:moss_block"
+            }
+          }
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {
+            "weapon.*": {
+              "items": "minecraft:nether_wart"
+            }
+          }
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {
+            "weapon.*": {
+              "items": "minecraft:bamboo"
+            }
+          }
+        }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {
+            "weapon.*": {
+              "items": "minecraft:chorus_fruit"
+            }
+          }
+        }
+      }
+    ]
+  }
+  

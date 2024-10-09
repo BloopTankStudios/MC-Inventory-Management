@@ -1,0 +1,15 @@
+[
+    {
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:can_break": {}
+      }
+    },
+    {
+        "function": "minecraft:toggle_tooltips",
+        "toggles": {
+          "minecraft:can_break": false
+        }
+    }
+  ]
+  

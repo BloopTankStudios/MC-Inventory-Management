@@ -1,0 +1,26 @@
+{
+"values": [
+"mud",
+"mud",
+"dirt",
+"cobblestone",
+"cobblestone",
+"stone_bricks",
+"diorite",
+"andesite",
+"nether_bricks",
+"end_stone_bricks",
+"oak_log",
+"spruce_log",
+"birch_log",
+"jungle_log",
+"acacia_log",
+"dark_oak_log",
+"mangrove_log",
+"cherry_log",
+"crimson_stem",
+"warped_stem",
+"bamboo_planks",
+"gravel"
+]
+}

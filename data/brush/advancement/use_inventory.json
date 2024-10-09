@@ -1,0 +1,19 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:reference",
+              "name": "brush:has_retextured_item"
+            }
+          ]
+        }
+      }
+    },
+    "rewards": {
+      "function": "brush:gui/reset_retextured_items"
+    }
+  }
+  

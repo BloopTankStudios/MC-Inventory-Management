@@ -1,0 +1,139 @@
+[
+    {
+        "from": "log",
+        "to": "wood",
+        "using": "stick",
+        "inverted_using": "brush",
+        "sound": "block.wood.place"
+    },
+    {
+        "from": "bamboo_planks",
+        "to": "bamboo_mosaic",
+        "using": "bamboo",
+        "inverted_using": "brush",
+        "sound": "block.bamboo_wood.place"
+    },
+    {
+        "from": "grass_block",
+        "to": "dirt",
+        "using": "flint_and_steel",
+        "sound": ""
+    },
+    {
+        "from": "podzol",
+        "to": "dirt",
+        "using": "flint_and_steel",
+        "sound": ""
+    },
+    {
+        "from": "mycelium",
+        "to": "dirt",
+        "using": "flint_and_steel",
+        "sound": ""
+    },
+    {
+        "from": "dirt",
+        "to": "rooted_dirt",
+        "using": "bone_meal",
+        "inverted_using": "brush",
+        "sound": "block.rooted_dirt.place"
+    },
+    {
+        "from": "mud",
+        "to": "packed_mud",
+        "using": "wheat",
+        "inverted_using": "water_bottle",
+        "sound": "block.packed_mud.place"
+    },
+    {
+        "from": "mud",
+        "to": "muddy_mangrove_roots",
+        "using": "stick",
+        "inverted_using": "brush",
+        "sound": "block.muddy_mangrove_roots.place"
+    },
+    {
+        "from": "gravel",
+        "to": "cobblestone",
+        "using": "quartz",
+        "inverted_using": "brush",
+        "sound": "block.stone.place"
+    },
+    {
+        "from": "cobblestone",
+        "to": "andesite",
+        "using": "quartz",
+        "inverted_using": "brush",
+        "sound": "block.stone.place"
+    },
+    {
+        "from": "andesite",
+        "to": "diorite",
+        "using": "quartz",
+        "inverted_using": "brush",
+        "sound": "block.stone.place"
+    },
+    {
+        "from": "diorite",
+        "to": "granite",
+        "using": "quartz",
+        "inverted_using": "brush",
+        "sound": "block.stone.place"
+    },
+    {
+        "from": "sand",
+        "to": "sandstone",
+        "using": "honeycomb",
+        "inverted_using": "brush",
+        "sound": ""
+    },
+    {
+        "from": "red_sand",
+        "to": "red_sandstone",
+        "using": "honeycomb",
+        "inverted_using": "brush",
+        "sound": ""
+    },
+    {
+        "from": "sand",
+        "to": "red_sand",
+        "using": "red_dye",
+        "inverted_using": "brush",
+        "sound": ""
+    },
+    {
+        "from": "prismarine",
+        "to": "dark_prismarine",
+        "using": "black_dye",
+        "inverted_using": "brush",
+        "sound": ""
+    },
+    {
+        "from": "nether_bricks",
+        "to": "red_nether_bricks",
+        "using": "nether_wart",
+        "inverted_using": "brush",
+        "sound": "block.nether_bricks.place"
+    },
+    {
+        "from": "end_stone_bricks",
+        "to": "purpur_block",
+        "using": "chorus_fruit",
+        "inverted_using": "brush",
+        "sound": "item.crop.plant"
+    },
+    {
+        "from": "carved_pumpkin",
+        "to": "jack_o_lantern",
+        "using": "flint_and_steel",
+        "inverted_using": "water_bottle",
+        "sound": ""
+    },
+    {
+        "from": "sponge",
+        "to": "wet_sponge",
+        "using": "water_bottle",
+        "inverted_using": "flint_and_steel",
+        "sound": ""
+    }
+]

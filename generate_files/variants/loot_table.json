@@ -1,0 +1,67 @@
+[
+    {
+        "breaks_into": "bricks",
+        "blocks": ["bricks"],
+        "type": "one_to_one"
+    },
+    {
+        "breaks_into": "planks",
+        "blocks": ["planks"],
+        "type": "one_to_one"
+    },
+    {
+        "breaks_into": "log",
+        "blocks": ["stripped_log", "wood", "stripped_wood"],
+        "type": "one_to_one"
+    },
+    {
+        "breaks_into": "bamboo_block",
+        "blocks": ["stripped_bamboo_block"],
+        "type": "one_to_one"
+    },
+    {
+        "breaks_into": "bamboo_planks",
+        "blocks": ["bamboo_planks", "bamboo_mosaic"],
+        "type": "one_to_one"
+    },
+    {
+        "breaks_into": "mud",
+        "blocks": ["muddy_mangrove_roots"],
+        "type": "one_to_one"
+    },
+    {
+        "breaks_into": "carved_pumpkin",
+        "blocks": ["jack_o_lantern"],
+        "type": "one_to_one"
+    },
+    {
+        "breaks_into": "amethyst_block",
+        "blocks": ["budding_amethyst"],
+        "type": "unobtainable"
+    },
+    {
+        "breaks_into": "cobbled_deepslate",
+        "blocks": ["reinforced_deepslate"],
+        "type": "unobtainable"
+    },
+    {
+        "breaks_into": "stick",
+        "blocks": ["mangrove_roots"],
+        "type": "shearable"
+    },
+    {
+        "breaks_into": "crimson_fungus",
+        "blocks": ["nether_wart_block"],
+        "type": "shearable"
+    },
+    {
+        "breaks_into": "warped_fungus",
+        "blocks": ["warped_wart_block"],
+        "type": "shearable"
+    },
+    {
+        "breaks_into": "air",
+        "blocks": ["weeping_vines", "twisting_vines", "crimson_roots", "warped_roots"],
+        "type": "shearable"
+    }
+]

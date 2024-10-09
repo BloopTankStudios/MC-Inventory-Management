@@ -1,0 +1,228 @@
+{
+	"providers": [
+		{
+			"type": "space",
+			"advances": {
+			   "\uE000": 1,
+			   "\uE001": 2,
+			   "\uE002": 4,
+			   "\uE003": 8,
+			   "\uE004": 16,
+			   "\uE005": -1,
+			   "\uE006": -2,
+			   "\uE007": -4,
+			   "\uE008": -8,
+			   "\uE009": -16,
+			   "\uE00a": 215,
+			   "\uE00b": -19,
+			   "\uE00c": -17,
+			   "\uE00d": 1,
+			   "\uE00e": -9,
+			   "\uE00f": -1
+			}
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:gui/variant_slot.png",
+			"ascent": -40,
+			"height": 20,
+			"chars": ["\uE010"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:gui/variant_slot_current.png",
+			"ascent": -40,
+			"height": 20,
+			"chars": ["\uE011"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:gui/variant_slot_fired.png",
+			"ascent": -40,
+			"height": 20,
+			"chars": ["\uE012"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:gui/variant_slot_waxed.png",
+			"ascent": -40,
+			"height": 20,
+			"chars": ["\uE013"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:gui/variant_slot_chiseled.png",
+			"ascent": -40,
+			"height": 20,
+			"chars": ["\uE014"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:gui/icon_cut.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE01a\uE01b\uE01c\uE01d"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/brush.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE020"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/water_bottle.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE021"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/flint_and_steel.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE022"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/honeycomb.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE023"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/iron_pickaxe.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE024"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:blockmodel/wood_variants.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": [	"\uE025\uE026\uE027\uE028\uE029\uE02a\uE02b\uE02c\uE02d\uE02e",
+						"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+						"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:blockmodel/custom_variants.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": [	"\uE030\uE031\uE032\uE033\u0000",
+						"\u0000\u0000\u0000\u0000\u0000",
+						"\u0000\u0000\u0000\u0000\u0000",
+						"\u0000\u0000\u0000\u0000\u0000"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/wheat.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE040"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/bone_meal.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE041"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/quartz.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE042"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/chorus_fruit.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE043"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/nether_wart.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE044"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/stick.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE045"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/bamboo.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE046"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/red_dye.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE050"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:item/black_dye.png",
+			"ascent": -49,
+			"height": 10,
+			"chars": ["\uE051"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:blockmodel/default_variants.png",
+			"ascent": -43,
+			"height": 15,
+			"chars": [	"\uE100\uE101\uE102\uE103\u0000\u0000\u0000\u0000",
+						"\uE108\uE109\u0000\u0000\u0000\u0000\u0000\u0000",
+						"\uE110\uE111\uE112\uE113\uE114\uE115\uE116\u0000",
+						"\uE118\uE119\u0000\u0000\u0000\u0000\u0000\u0000",
+						"\uE120\uE121\u0000\u0000\u0000\u0000\u0000\u0000",
+						"\uE128\uE129\u0000\u0000\u0000\u0000\u0000\u0000",
+						"\uE130\uE131\u0000\u0000\u0000\u0000\u0000\u0000",
+						"\uE138\uE139\uE13a\uE13b\uE13c\uE13d\uE13e\uE13f",
+						"\uE140\uE141\uE142\uE143\uE144\u0000\u0000\u0000",
+						"\uE148\uE149\uE14a\uE14b\u0000\u0000\u0000\u0000",
+						"\uE150\uE151\uE152\uE153\u0000\u0000\u0000\u0000",
+						"\uE158\uE159\u0000\u0000\u0000\u0000\u0000\u0000",
+						"\uE160\uE161\uE162\u0000\u0000\u0000\u0000\u0000",
+						"\uE168\uE169\uE16a\u0000\u0000\u0000\u0000\u0000",
+						"\uE170\uE171\uE172\uE173\uE174\u0000\u0000\u0000",
+						"\uE178\uE179\u0000\u0000\u0000\u0000\u0000\u0000",
+						"\uE180\uE181\u0000\u0000\u0000\u0000\u0000\u0000",
+						"\uE188\uE189\uE18a\uE18b\uE18c\u0000\u0000\u0000",
+						"\uE190\uE191\uE192\uE193\u0000\u0000\u0000\u0000"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:blockmodel/custom_variants.png",
+			"ascent": -43,
+			"height": 15,
+			"chars": [	"\u0000\u0000\u0000\uE1a0\uE1a1",
+						"\uE1a2\uE1a3\uE1a4\uE1a5\uE1a6",
+						"\uE1a7\uE1a8\uE1a9\uE1aa\uE1ab",
+						"\uE1ac\uE1ad\uE1ae\uE1af\u0000"]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:blockmodel/wood_variants.png",
+			"ascent": -43,
+			"height": 15,
+			"chars": [	"\uE200\uE201\uE202\uE203\uE204\uE205\uE206\uE207\uE208\uE209",
+						"\uE210\uE211\uE212\uE213\uE214\uE215\uE216\uE217\uE218\uE219",
+						"\uE220\uE221\uE222\uE223\uE224\uE225\uE226\uE227\uE228\uE229"]
+		}
+	]
+}

@@ -1,0 +1,1577 @@
+[
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "mud",
+        "dirt",
+        "coarse_dirt"
+      ],
+      "special_case": [
+        {
+          "use": "wheat",
+          "sound": "block.packed_mud.place",
+          "converts_to": "packed_mud"
+        },
+        {
+          "use": "stick",
+          "sound": "block.muddy_mangrove_roots.place",
+          "converts_to": "muddy_mangrove_roots"
+        }
+      ]
+    },
+    "gui": {
+      "water_to_fire": [
+        "mud",
+        "dirt",
+        "coarse_dirt"
+      ],
+      "special_case": [
+        {
+          "use": "wheat",
+          "sound": "block.packed_mud.place",
+          "converts_to": "packed_mud"
+        },
+        {
+          "use": "stick",
+          "sound": "block.muddy_mangrove_roots.place",
+          "converts_to": "muddy_mangrove_roots"
+        }
+      ]
+    },
+    "id": "mud",
+    "breaks_into": "dirt"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "mud",
+        "dirt",
+        "coarse_dirt"
+      ],
+      "special_case": [{
+        "use": "bone_meal",
+        "sound": "block.rooted_dirt.place",
+        "converts_to": "rooted_dirt"
+      }]
+    },
+    "gui": {
+      "water_to_fire": [
+        "mud",
+        "dirt",
+        "coarse_dirt"
+      ],
+      "special_case": [{
+        "use": "bone_meal",
+        "sound": "block.rooted_dirt.place",
+        "converts_to": "rooted_dirt"
+      }]
+    },
+    "id": "dirt",
+    "breaks_into": "dirt"
+  },
+  {
+    "convertsTo": {"water_to_fire": [
+      "mud",
+      "dirt",
+      "coarse_dirt"
+    ]},
+    "gui": {"water_to_fire": [
+      "mud",
+      "dirt",
+      "coarse_dirt"
+    ]},
+    "id": "coarse_dirt",
+    "breaks_into": "dirt"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["packed_mud"],
+      "water_to_waxed": ["mud_bricks"],
+      "special_case": [{
+        "use": "water_bottle",
+        "sound": "block.packed_mud.place",
+        "converts_to": "mud"
+      }]
+    },
+    "gui": {
+      "water_to_fire": ["packed_mud"],
+      "water_to_waxed": ["mud_bricks"],
+      "special_case": [{
+        "use": "water_bottle",
+        "sound": "block.packed_mud.place",
+        "converts_to": "mud"
+      }]
+    },
+    "id": "packed_mud",
+    "breaks_into": "dirt"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["packed_mud"],
+      "water_to_waxed": ["mud_bricks"]
+    },
+    "gui": {
+      "water_to_fire": ["packed_mud"],
+      "water_to_waxed": ["mud_bricks"]
+    },
+    "id": "mud_bricks",
+    "breaks_into": "dirt"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "cobblestone",
+        "stone",
+        "smooth_stone"
+      ],
+      "attributes": [{
+        "use": "moss_block",
+        "block": "mossy_cobblestone"
+      }],
+      "special_case": [
+        {
+          "use": "brush",
+          "sound": "block.stone.place",
+          "converts_to": "gravel"
+        },
+        {
+          "use": "quartz",
+          "sound": "block.stone.place",
+          "converts_to": "andesite"
+        }
+      ]
+    },
+    "gui": {
+      "water_to_fire": [
+        "cobblestone",
+        "stone",
+        "smooth_stone"
+      ],
+      "attributes": [{
+        "use": "moss_block",
+        "block": "mossy_cobblestone"
+      }],
+      "special_case": [
+        {
+          "use": "brush",
+          "sound": "block.stone.place",
+          "converts_to": "gravel"
+        },
+        {
+          "use": "quartz",
+          "sound": "block.stone.place",
+          "converts_to": "andesite"
+        }
+      ]
+    },
+    "id": "cobblestone",
+    "breaks_into": "cobblestone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "cobblestone",
+        "stone",
+        "smooth_stone"
+      ],
+      "water_to_waxed": ["stone_bricks"]
+    },
+    "gui": {
+      "water_to_fire": [
+        "cobblestone",
+        "stone",
+        "smooth_stone"
+      ],
+      "water_to_waxed": ["stone_bricks"]
+    },
+    "id": "stone",
+    "breaks_into": "cobblestone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["cobblestone"],
+      "water_to_waxed": ["stone_bricks"],
+      "chiseled": ["chiseled_stone_bricks"],
+      "attributes": [
+        {
+          "use": "flint_and_steel",
+          "block": "cracked_stone_bricks"
+        },
+        {
+          "use": "moss_block",
+          "block": "mossy_stone_bricks"
+        }
+      ]
+    },
+    "gui": {
+      "water_to_fire": ["cobblestone"],
+      "water_to_waxed": ["stone_bricks"],
+      "chiseled": ["chiseled_stone_bricks"],
+      "attributes": [
+        {
+          "use": "flint_and_steel",
+          "block": "cracked_stone_bricks"
+        },
+        {
+          "use": "moss_block",
+          "block": "mossy_stone_bricks"
+        }
+      ]
+    },
+    "id": "stone_bricks",
+    "breaks_into": "cobblestone"
+  },
+  {
+    "convertsTo": {
+      "water_to_waxed": ["stone_bricks"],
+      "chiseled": ["chiseled_stone_bricks"]
+    },
+    "gui": {
+      "water_to_waxed": ["stone_bricks"],
+      "chiseled": ["chiseled_stone_bricks"]
+    },
+    "id": "chiseled_stone_bricks",
+    "breaks_into": "cobblestone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "cobblestone",
+        "stone",
+        "smooth_stone"
+      ],
+      "chiseled": ["smooth_stone_double_slab"]
+    },
+    "gui": {
+      "water_to_fire": [
+        "cobblestone",
+        "stone",
+        "smooth_stone"
+      ],
+      "chiseled": ["smooth_stone_double_slab"]
+    },
+    "id": "smooth_stone",
+    "breaks_into": "cobblestone"
+  },
+  {
+    "convertsTo": {
+      "water_to_waxed": ["smooth_stone"],
+      "chiseled": ["smooth_stone_double_slab"]
+    },
+    "gui": {
+      "water_to_waxed": ["smooth_stone"],
+      "chiseled": ["smooth_stone_double_slab"]
+    },
+    "id": "smooth_stone_double_slab"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["granite"],
+      "water_to_waxed": ["polished_granite"],
+      "special_case": [{
+        "use": "brush",
+        "sound": "block.stone.place",
+        "converts_to": "diorite"
+      }]
+    },
+    "gui": {
+      "water_to_fire": ["granite"],
+      "water_to_waxed": ["polished_granite"],
+      "special_case": [{
+        "use": "brush",
+        "sound": "block.stone.place",
+        "converts_to": "diorite"
+      }]
+    },
+    "id": "granite",
+    "breaks_into": "cobblestone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["granite"],
+      "water_to_waxed": ["polished_granite"]
+    },
+    "gui": {
+      "water_to_fire": ["granite"],
+      "water_to_waxed": ["polished_granite"]
+    },
+    "id": "polished_granite",
+    "breaks_into": "cobblestone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["diorite"],
+      "water_to_waxed": ["polished_diorite"],
+      "special_case": [
+        {
+          "use": "brush",
+          "sound": "block.stone.place",
+          "converts_to": "andesite"
+        },
+        {
+          "use": "quartz",
+          "sound": "block.stone.place",
+          "converts_to": "granite"
+        }
+      ]
+    },
+    "gui": {
+      "water_to_fire": ["diorite"],
+      "water_to_waxed": ["polished_diorite"],
+      "special_case": [
+        {
+          "use": "brush",
+          "sound": "block.stone.place",
+          "converts_to": "andesite"
+        },
+        {
+          "use": "quartz",
+          "sound": "block.stone.place",
+          "converts_to": "granite"
+        }
+      ]
+    },
+    "id": "diorite",
+    "breaks_into": "cobblestone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["diorite"],
+      "water_to_waxed": ["polished_diorite"]
+    },
+    "gui": {
+      "water_to_fire": ["diorite"],
+      "water_to_waxed": ["polished_diorite"]
+    },
+    "id": "polished_diorite",
+    "breaks_into": "cobblestone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["andesite"],
+      "water_to_waxed": ["polished_andesite"],
+      "special_case": [
+        {
+          "use": "brush",
+          "sound": "block.stone.place",
+          "converts_to": "cobblestone"
+        },
+        {
+          "use": "quartz",
+          "sound": "block.stone.place",
+          "converts_to": "diorite"
+        }
+      ]
+    },
+    "gui": {
+      "water_to_fire": ["andesite"],
+      "water_to_waxed": ["polished_andesite"],
+      "special_case": [
+        {
+          "use": "brush",
+          "sound": "block.stone.place",
+          "converts_to": "cobblestone"
+        },
+        {
+          "use": "quartz",
+          "sound": "block.stone.place",
+          "converts_to": "diorite"
+        }
+      ]
+    },
+    "id": "andesite",
+    "breaks_into": "cobblestone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["andesite"],
+      "water_to_waxed": ["polished_andesite"]
+    },
+    "gui": {
+      "water_to_fire": ["andesite"],
+      "water_to_waxed": ["polished_andesite"]
+    },
+    "id": "polished_andesite",
+    "breaks_into": "cobblestone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "cobbled_deepslate",
+        "deepslate"
+      ],
+      "water_to_waxed": ["polished_deepslate"]
+    },
+    "gui": {
+      "water_to_fire": [
+        "cobbled_deepslate",
+        "deepslate"
+      ],
+      "water_to_waxed": ["polished_deepslate"]
+    },
+    "id": "cobbled_deepslate",
+    "breaks_into": "cobbled_deepslate"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "cobbled_deepslate",
+        "deepslate"
+      ],
+      "water_to_waxed": ["polished_deepslate"]
+    },
+    "gui": {
+      "water_to_fire": [
+        "cobbled_deepslate",
+        "deepslate"
+      ],
+      "water_to_waxed": ["polished_deepslate"]
+    },
+    "id": "deepslate",
+    "breaks_into": "cobbled_deepslate"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["cobbled_deepslate"],
+      "water_to_waxed": [
+        "polished_deepslate",
+        "deepslate_bricks",
+        "deepslate_tiles"
+      ],
+      "chiseled": ["chiseled_deepslate"]
+    },
+    "gui": {
+      "water_to_fire": ["cobbled_deepslate"],
+      "water_to_waxed": [
+        "polished_deepslate",
+        "deepslate_bricks",
+        "deepslate_tiles"
+      ],
+      "chiseled": ["chiseled_deepslate"]
+    },
+    "id": "polished_deepslate",
+    "breaks_into": "cobbled_deepslate"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["cobbled_deepslate"],
+      "water_to_waxed": [
+        "polished_deepslate",
+        "deepslate_bricks",
+        "deepslate_tiles"
+      ],
+      "chiseled": ["chiseled_deepslate"],
+      "attributes": [{
+        "use": "flint_and_steel",
+        "block": "cracked_deepslate_bricks"
+      }]
+    },
+    "gui": {
+      "water_to_fire": ["cobbled_deepslate"],
+      "water_to_waxed": [
+        "polished_deepslate",
+        "deepslate_bricks",
+        "deepslate_tiles"
+      ],
+      "chiseled": ["chiseled_deepslate"],
+      "attributes": [{
+        "use": "flint_and_steel",
+        "block": "cracked_deepslate_bricks"
+      }]
+    },
+    "id": "deepslate_bricks",
+    "breaks_into": "cobbled_deepslate"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["cobbled_deepslate"],
+      "water_to_waxed": [
+        "polished_deepslate",
+        "deepslate_bricks",
+        "deepslate_tiles"
+      ],
+      "chiseled": ["chiseled_deepslate"],
+      "attributes": [{
+        "use": "flint_and_steel",
+        "block": "cracked_deepslate_tiles"
+      }]
+    },
+    "gui": {
+      "water_to_fire": ["cobbled_deepslate"],
+      "water_to_waxed": [
+        "polished_deepslate",
+        "deepslate_bricks",
+        "deepslate_tiles"
+      ],
+      "chiseled": ["chiseled_deepslate"],
+      "attributes": [{
+        "use": "flint_and_steel",
+        "block": "cracked_deepslate_tiles"
+      }]
+    },
+    "id": "deepslate_tiles",
+    "breaks_into": "cobbled_deepslate"
+  },
+  {
+    "convertsTo": {
+      "water_to_waxed": ["polished_deepslate"],
+      "chiseled": ["chiseled_deepslate"]
+    },
+    "gui": {
+      "water_to_waxed": ["polished_deepslate"],
+      "chiseled": ["chiseled_deepslate"]
+    },
+    "id": "chiseled_deepslate",
+    "breaks_into": "cobbled_deepslate"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["tuff"],
+      "water_to_waxed": ["polished_tuff"]
+    },
+    "gui": {
+      "water_to_fire": ["tuff"],
+      "water_to_waxed": ["polished_tuff"]
+    },
+    "id": "tuff",
+    "breaks_into": "tuff"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["tuff"],
+      "water_to_waxed": [
+        "polished_tuff",
+        "tuff_bricks"
+      ],
+      "chiseled": ["chiseled_tuff_bricks"]
+    },
+    "gui": {
+      "water_to_fire": ["tuff"],
+      "water_to_waxed": [
+        "polished_tuff",
+        "tuff_bricks"
+      ],
+      "chiseled": ["chiseled_tuff_bricks"]
+    },
+    "id": "polished_tuff",
+    "breaks_into": "tuff"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["tuff"],
+      "water_to_waxed": [
+        "polished_tuff",
+        "tuff_bricks"
+      ],
+      "chiseled": ["chiseled_tuff_bricks"]
+    },
+    "gui": {
+      "water_to_fire": ["tuff"],
+      "water_to_waxed": [
+        "polished_tuff",
+        "tuff_bricks"
+      ],
+      "chiseled": ["chiseled_tuff_bricks"]
+    },
+    "id": "tuff_bricks",
+    "breaks_into": "tuff"
+  },
+  {
+    "convertsTo": {
+      "water_to_waxed": ["polished_tuff"],
+      "chiseled": [
+        "chiseled_tuff_bricks",
+        "chiseled_tuff"
+      ]
+    },
+    "gui": {
+      "water_to_waxed": ["polished_tuff"],
+      "chiseled": [
+        "chiseled_tuff_bricks",
+        "chiseled_tuff"
+      ]
+    },
+    "id": "chiseled_tuff_bricks",
+    "breaks_into": "tuff"
+  },
+  {
+    "convertsTo": {
+      "water_to_waxed": ["polished_tuff"],
+      "chiseled": [
+        "chiseled_tuff_bricks",
+        "chiseled_tuff"
+      ]
+    },
+    "gui": {
+      "water_to_waxed": ["polished_tuff"],
+      "chiseled": [
+        "chiseled_tuff_bricks",
+        "chiseled_tuff"
+      ]
+    },
+    "id": "chiseled_tuff",
+    "breaks_into": "tuff"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "sandstone",
+        "smooth_sandstone"
+      ],
+      "water_to_waxed": ["cut_sandstone"],
+      "special_case": [{
+        "use": "brush",
+        "sound": "",
+        "converts_to": "sand"
+      }]
+    },
+    "gui": {
+      "water_to_fire": [
+        "sandstone",
+        "smooth_sandstone"
+      ],
+      "water_to_waxed": ["cut_sandstone"],
+      "special_case": [{
+        "use": "brush",
+        "sound": "",
+        "converts_to": "sand"
+      }]
+    },
+    "id": "sandstone",
+    "breaks_into": "sandstone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "sandstone",
+        "smooth_sandstone"
+      ],
+      "water_to_waxed": ["cut_sandstone"]
+    },
+    "gui": {
+      "water_to_fire": [
+        "sandstone",
+        "smooth_sandstone"
+      ],
+      "water_to_waxed": ["cut_sandstone"]
+    },
+    "id": "smooth_sandstone",
+    "breaks_into": "sandstone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["sandstone"],
+      "water_to_waxed": ["cut_sandstone"],
+      "chiseled": ["chiseled_sandstone"]
+    },
+    "gui": {
+      "water_to_fire": ["sandstone"],
+      "water_to_waxed": ["cut_sandstone"],
+      "chiseled": ["chiseled_sandstone"]
+    },
+    "id": "cut_sandstone",
+    "breaks_into": "sandstone"
+  },
+  {
+    "convertsTo": {
+      "water_to_waxed": ["cut_sandstone"],
+      "chiseled": ["chiseled_sandstone"]
+    },
+    "gui": {
+      "water_to_waxed": ["cut_sandstone"],
+      "chiseled": ["chiseled_sandstone"]
+    },
+    "id": "chiseled_sandstone",
+    "breaks_into": "sandstone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "red_sandstone",
+        "smooth_red_sandstone"
+      ],
+      "water_to_waxed": ["cut_red_sandstone"],
+      "special_case": [{
+        "use": "brush",
+        "sound": "",
+        "converts_to": "red_sand"
+      }]
+    },
+    "gui": {
+      "water_to_fire": [
+        "red_sandstone",
+        "smooth_red_sandstone"
+      ],
+      "water_to_waxed": ["cut_red_sandstone"],
+      "special_case": [{
+        "use": "brush",
+        "sound": "",
+        "converts_to": "red_sand"
+      }]
+    },
+    "id": "red_sandstone",
+    "breaks_into": "red_sandstone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "red_sandstone",
+        "smooth_red_sandstone"
+      ],
+      "water_to_waxed": ["cut_red_sandstone"]
+    },
+    "gui": {
+      "water_to_fire": [
+        "red_sandstone",
+        "smooth_red_sandstone"
+      ],
+      "water_to_waxed": ["cut_red_sandstone"]
+    },
+    "id": "smooth_red_sandstone",
+    "breaks_into": "red_sandstone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["red_sandstone"],
+      "water_to_waxed": ["cut_red_sandstone"],
+      "chiseled": ["chiseled_red_sandstone"]
+    },
+    "gui": {
+      "water_to_fire": ["red_sandstone"],
+      "water_to_waxed": ["cut_red_sandstone"],
+      "chiseled": ["chiseled_red_sandstone"]
+    },
+    "id": "cut_red_sandstone",
+    "breaks_into": "red_sandstone"
+  },
+  {
+    "convertsTo": {
+      "water_to_waxed": ["cut_red_sandstone"],
+      "chiseled": ["chiseled_red_sandstone"]
+    },
+    "gui": {
+      "water_to_waxed": ["cut_red_sandstone"],
+      "chiseled": ["chiseled_red_sandstone"]
+    },
+    "id": "chiseled_red_sandstone",
+    "breaks_into": "red_sandstone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["prismarine"],
+      "water_to_waxed": ["prismarine_bricks"],
+      "special_case": [{
+        "use": "black_dye",
+        "sound": "",
+        "converts_to": "dark_prismarine"
+      }]
+    },
+    "gui": {
+      "water_to_fire": ["prismarine"],
+      "water_to_waxed": ["prismarine_bricks"],
+      "special_case": [{
+        "use": "black_dye",
+        "sound": "",
+        "converts_to": "dark_prismarine"
+      }]
+    },
+    "id": "prismarine",
+    "breaks_into": "prismarine"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["prismarine"],
+      "water_to_waxed": ["prismarine_bricks"]
+    },
+    "gui": {
+      "water_to_fire": ["prismarine"],
+      "water_to_waxed": ["prismarine_bricks"]
+    },
+    "id": "prismarine_bricks",
+    "breaks_into": "prismarine"
+  },
+  {
+    "convertsTo": {
+      "water_to_waxed": ["nether_bricks"],
+      "chiseled": ["chiseled_nether_bricks"],
+      "attributes": [{
+        "use": "flint_and_steel",
+        "block": "cracked_nether_bricks"
+      }],
+      "special_case": [{
+        "use": "nether_wart",
+        "sound": "block.nether_bricks.place",
+        "converts_to": "red_nether_bricks"
+      }]
+    },
+    "gui": {
+      "water_to_waxed": ["nether_bricks"],
+      "chiseled": ["chiseled_nether_bricks"],
+      "attributes": [{
+        "use": "flint_and_steel",
+        "block": "cracked_nether_bricks"
+      }],
+      "special_case": [{
+        "use": "nether_wart",
+        "sound": "block.nether_bricks.place",
+        "converts_to": "red_nether_bricks"
+      }]
+    },
+    "id": "nether_bricks",
+    "breaks_into": "nether_bricks"
+  },
+  {
+    "convertsTo": {
+      "water_to_waxed": ["nether_bricks"],
+      "chiseled": ["chiseled_nether_bricks"]
+    },
+    "gui": {
+      "water_to_waxed": ["nether_bricks"],
+      "chiseled": ["chiseled_nether_bricks"]
+    },
+    "id": "chiseled_nether_bricks",
+    "breaks_into": "nether_bricks"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "basalt",
+        "smooth_basalt"
+      ],
+      "water_to_waxed": ["polished_basalt"]
+    },
+    "gui": {
+      "water_to_fire": [
+        "basalt",
+        "smooth_basalt"
+      ],
+      "water_to_waxed": ["polished_basalt"]
+    },
+    "id": "basalt",
+    "breaks_into": "basalt"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "basalt",
+        "smooth_basalt"
+      ],
+      "water_to_waxed": ["polished_basalt"]
+    },
+    "gui": {
+      "water_to_fire": [
+        "basalt",
+        "smooth_basalt"
+      ],
+      "water_to_waxed": ["polished_basalt"]
+    },
+    "id": "smooth_basalt",
+    "breaks_into": "basalt"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["basalt"],
+      "water_to_waxed": ["polished_basalt"]
+    },
+    "gui": {
+      "water_to_fire": ["basalt"],
+      "water_to_waxed": ["polished_basalt"]
+    },
+    "id": "polished_basalt",
+    "breaks_into": "basalt"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["blackstone"],
+      "water_to_waxed": ["polished_blackstone"]
+    },
+    "gui": {
+      "water_to_fire": ["blackstone"],
+      "water_to_waxed": ["polished_blackstone"]
+    },
+    "id": "blackstone",
+    "breaks_into": "blackstone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["blackstone"],
+      "water_to_waxed": [
+        "polished_blackstone",
+        "polished_blackstone_bricks"
+      ],
+      "chiseled": ["chiseled_polished_blackstone"]
+    },
+    "gui": {
+      "water_to_fire": ["blackstone"],
+      "water_to_waxed": [
+        "polished_blackstone",
+        "polished_blackstone_bricks"
+      ],
+      "chiseled": ["chiseled_polished_blackstone"]
+    },
+    "id": "polished_blackstone",
+    "breaks_into": "blackstone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["blackstone"],
+      "water_to_waxed": [
+        "polished_blackstone",
+        "polished_blackstone_bricks"
+      ],
+      "chiseled": ["chiseled_polished_blackstone"],
+      "attributes": [{
+        "use": "flint_and_steel",
+        "block": "cracked_polished_blackstone_bricks"
+      }]
+    },
+    "gui": {
+      "water_to_fire": ["blackstone"],
+      "water_to_waxed": [
+        "polished_blackstone",
+        "polished_blackstone_bricks"
+      ],
+      "chiseled": ["chiseled_polished_blackstone"],
+      "attributes": [{
+        "use": "flint_and_steel",
+        "block": "cracked_polished_blackstone_bricks"
+      }]
+    },
+    "id": "polished_blackstone_bricks",
+    "breaks_into": "blackstone"
+  },
+  {
+    "convertsTo": {
+      "water_to_waxed": ["polished_blackstone"],
+      "chiseled": ["chiseled_polished_blackstone"]
+    },
+    "gui": {
+      "water_to_waxed": ["polished_blackstone"],
+      "chiseled": ["chiseled_polished_blackstone"]
+    },
+    "id": "chiseled_polished_blackstone",
+    "breaks_into": "blackstone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["end_stone"],
+      "water_to_waxed": ["end_stone_bricks"]
+    },
+    "gui": {
+      "water_to_fire": ["end_stone"],
+      "water_to_waxed": ["end_stone_bricks"]
+    },
+    "id": "end_stone",
+    "breaks_into": "end_stone"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["end_stone"],
+      "water_to_waxed": ["end_stone_bricks"],
+      "special_case": [{
+        "use": "chorus_fruit",
+        "sound": "item.crop.plant",
+        "converts_to": "purpur_block"
+      }]
+    },
+    "gui": {
+      "water_to_fire": ["end_stone"],
+      "water_to_waxed": ["end_stone_bricks"],
+      "special_case": [{
+        "use": "chorus_fruit",
+        "sound": "item.crop.plant",
+        "converts_to": "purpur_block"
+      }]
+    },
+    "id": "end_stone_bricks",
+    "breaks_into": "end_stone"
+  },
+  {
+    "convertsTo": {
+      "water_to_waxed": ["purpur_block"],
+      "chiseled": ["purpur_pillar"],
+      "special_case": [{
+        "use": "brush",
+        "sound": "item.crop.plant",
+        "converts_to": "end_stone_bricks"
+      }]
+    },
+    "gui": {
+      "water_to_waxed": ["purpur_block"],
+      "chiseled": ["purpur_pillar"],
+      "special_case": [{
+        "use": "brush",
+        "sound": "item.crop.plant",
+        "converts_to": "end_stone_bricks"
+      }]
+    },
+    "id": "purpur_block",
+    "breaks_into": "purpur_block"
+  },
+  {
+    "convertsTo": {
+      "water_to_waxed": ["purpur_block"],
+      "chiseled": ["purpur_pillar"]
+    },
+    "gui": {
+      "water_to_waxed": ["purpur_block"],
+      "chiseled": ["purpur_pillar"]
+    },
+    "id": "purpur_pillar",
+    "breaks_into": "purpur_block"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "quartz_block",
+        "smooth_quartz"
+      ],
+      "water_to_waxed": ["quartz_bricks"]
+    },
+    "gui": {
+      "water_to_fire": [
+        "quartz_block",
+        "smooth_quartz"
+      ],
+      "water_to_waxed": ["quartz_bricks"]
+    },
+    "id": "quartz_block",
+    "breaks_into": "quartz_block"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": [
+        "quartz_block",
+        "smooth_quartz"
+      ],
+      "water_to_waxed": ["quartz_bricks"]
+    },
+    "gui": {
+      "water_to_fire": [
+        "quartz_block",
+        "smooth_quartz"
+      ],
+      "water_to_waxed": ["quartz_bricks"]
+    },
+    "id": "smooth_quartz",
+    "breaks_into": "quartz_block"
+  },
+  {
+    "convertsTo": {
+      "water_to_fire": ["quartz_block"],
+      "water_to_waxed": ["quartz_bricks"],
+      "chiseled": ["chiseled_quartz_block"]
+    },
+    "gui": {
+      "water_to_fire": ["quartz_block"],
+      "water_to_waxed": ["quartz_bricks"],
+      "chiseled": ["chiseled_quartz_block"]
+    },
+    "id": "quartz_bricks",
+    "breaks_into": "quartz_block"
+  },
+  {
+    "convertsTo": {
+      "water_to_waxed": ["quartz_bricks"],
+      "chiseled": [
+        "chiseled_quartz_block",
+        "quartz_pillar"
+      ]
+    },
+    "gui": {
+      "water_to_waxed": ["quartz_bricks"],
+      "chiseled": [
+        "chiseled_quartz_block",
+        "quartz_pillar"
+      ]
+    },
+    "id": "chiseled_quartz_block",
+    "breaks_into": "quartz_block"
+  },
+  {
+    "convertsTo": {
+      "water_to_waxed": ["quartz_bricks"],
+      "chiseled": [
+        "chiseled_quartz_block",
+        "quartz_pillar"
+      ]
+    },
+    "gui": {
+      "water_to_waxed": ["quartz_bricks"],
+      "chiseled": [
+        "chiseled_quartz_block",
+        "quartz_pillar"
+      ]
+    },
+    "id": "quartz_pillar",
+    "breaks_into": "quartz_block"
+  },
+  {
+    "gui": {
+      "water_to_waxed": [
+        "copper",
+        "cut_copper"
+      ],
+      "chiseled": ["chiseled_copper"]
+    },
+    "id": "copper",
+    "breaks_into": "copper"
+  },
+  {
+    "gui": {
+      "water_to_waxed": [
+        "copper",
+        "cut_copper"
+      ],
+      "chiseled": ["chiseled_copper"]
+    },
+    "id": "cut_copper",
+    "breaks_into": "copper"
+  },
+  {
+    "gui": {
+      "water_to_waxed": ["copper"],
+      "chiseled": [
+        "chiseled_copper",
+        "copper_grate"
+      ]
+    },
+    "id": "chiseled_copper",
+    "breaks_into": "copper"
+  },
+  {
+    "gui": {
+      "water_to_waxed": ["copper"],
+      "chiseled": [
+        "chiseled_copper",
+        "copper_grate"
+      ]
+    },
+    "id": "copper_grate",
+    "breaks_into": "copper"
+  },
+  {
+    "gui": {
+      "self": "log",
+      "special_case": [{
+        "use": "stick",
+        "sound": "block.wood.place",
+        "converts_to": "wood"
+      }]
+    },
+    "id": "log"
+  },
+  {
+    "gui": {
+      "self": "wood",
+      "special_case": [{
+        "use": "brush",
+        "sound": "block.wood.place",
+        "converts_to": "log"
+      }]
+    },
+    "id": "wood",
+    "breaks_into": "log"
+  },
+  {
+    "convertsTo": {
+      "self": "bamboo_planks",
+      "special_case": [{
+        "use": "bamboo",
+        "sound": "block.bamboo_wood.place",
+        "converts_to": "bamboo_mosaic"
+      }]
+    },
+    "gui": {
+      "self": "bamboo_planks",
+      "special_case": [{
+        "use": "bamboo",
+        "sound": "block.bamboo_wood.place",
+        "converts_to": "bamboo_mosaic"
+      }]
+    },
+    "id": "bamboo_planks",
+    "breaks_into": "bamboo_planks"
+  },
+  {
+    "convertsTo": {
+      "self": "bamboo_mosaic",
+      "special_case": [{
+        "use": "brush",
+        "sound": "block.bamboo_wood.place",
+        "converts_to": "bamboo_planks"
+      }]
+    },
+    "gui": {
+      "self": "bamboo_mosaic",
+      "special_case": [{
+        "use": "brush",
+        "sound": "block.bamboo_wood.place",
+        "converts_to": "bamboo_planks"
+      }]
+    },
+    "id": "bamboo_mosaic",
+    "breaks_into": "bamboo_planks"
+  },
+  {
+    "convertsTo": {
+      "self": "grass_block",
+      "special_case": [{
+        "use": "flint_and_steel",
+        "sound": "",
+        "converts_to": "dirt"
+      }]
+    },
+    "gui": {
+      "self": "grass_block",
+      "special_case": [{
+        "use": "flint_and_steel",
+        "sound": "",
+        "converts_to": "dirt"
+      }]
+    },
+    "id": "grass_block"
+  },
+  {
+    "convertsTo": {
+      "self": "podzol",
+      "special_case": [{
+        "use": "flint_and_steel",
+        "sound": "",
+        "converts_to": "dirt"
+      }]
+    },
+    "gui": {
+      "self": "podzol",
+      "special_case": [{
+        "use": "flint_and_steel",
+        "sound": "",
+        "converts_to": "dirt"
+      }]
+    },
+    "id": "podzol"
+  },
+  {
+    "convertsTo": {
+      "self": "mycelium",
+      "special_case": [{
+        "use": "flint_and_steel",
+        "sound": "",
+        "converts_to": "dirt"
+      }]
+    },
+    "gui": {
+      "self": "mycelium",
+      "special_case": [{
+        "use": "flint_and_steel",
+        "sound": "",
+        "converts_to": "dirt"
+      }]
+    },
+    "id": "mycelium"
+  },
+  {
+    "convertsTo": {
+      "self": "rooted_dirt",
+      "special_case": [{
+        "use": "brush",
+        "sound": "block.rooted_dirt.place",
+        "converts_to": "dirt"
+      }]
+    },
+    "gui": {
+      "self": "rooted_dirt",
+      "special_case": [{
+        "use": "brush",
+        "sound": "block.rooted_dirt.place",
+        "converts_to": "dirt"
+      }]
+    },
+    "id": "rooted_dirt"
+  },
+  {
+    "convertsTo": {
+      "self": "muddy_mangrove_roots",
+      "special_case": [{
+        "use": "brush",
+        "sound": "block.muddy_mangrove_roots.place",
+        "converts_to": "mud"
+      }]
+    },
+    "gui": {
+      "self": "muddy_mangrove_roots",
+      "special_case": [{
+        "use": "brush",
+        "sound": "block.muddy_mangrove_roots.place",
+        "converts_to": "mud"
+      }]
+    },
+    "id": "muddy_mangrove_roots",
+    "breaks_into": "mud"
+  },
+  {
+    "convertsTo": {
+      "self": "gravel",
+      "special_case": [{
+        "use": "quartz",
+        "sound": "block.stone.place",
+        "converts_to": "cobblestone"
+      }]
+    },
+    "gui": {
+      "self": "gravel",
+      "special_case": [{
+        "use": "quartz",
+        "sound": "block.stone.place",
+        "converts_to": "cobblestone"
+      }]
+    },
+    "id": "gravel"
+  },
+  {
+    "convertsTo": {
+      "self": "sand",
+      "special_case": [
+        {
+          "use": "honeycomb",
+          "sound": "",
+          "converts_to": "sandstone"
+        },
+        {
+          "use": "red_dye",
+          "sound": "",
+          "converts_to": "red_sand"
+        }
+      ]
+    },
+    "gui": {
+      "self": "sand",
+      "special_case": [
+        {
+          "use": "honeycomb",
+          "sound": "",
+          "converts_to": "sandstone"
+        },
+        {
+          "use": "red_dye",
+          "sound": "",
+          "converts_to": "red_sand"
+        }
+      ]
+    },
+    "id": "sand"
+  },
+  {
+    "convertsTo": {
+      "self": "red_sand",
+      "special_case": [
+        {
+          "use": "honeycomb",
+          "sound": "",
+          "converts_to": "red_sandstone"
+        },
+        {
+          "use": "brush",
+          "sound": "",
+          "converts_to": "sand"
+        }
+      ]
+    },
+    "gui": {
+      "self": "red_sand",
+      "special_case": [
+        {
+          "use": "honeycomb",
+          "sound": "",
+          "converts_to": "red_sandstone"
+        },
+        {
+          "use": "brush",
+          "sound": "",
+          "converts_to": "sand"
+        }
+      ]
+    },
+    "id": "red_sand"
+  },
+  {
+    "convertsTo": {
+      "self": "dark_prismarine",
+      "special_case": [{
+        "use": "brush",
+        "sound": "",
+        "converts_to": "prismarine"
+      }]
+    },
+    "gui": {
+      "self": "dark_prismarine",
+      "special_case": [{
+        "use": "brush",
+        "sound": "",
+        "converts_to": "prismarine"
+      }]
+    },
+    "id": "dark_prismarine"
+  },
+  {
+    "convertsTo": {
+      "self": "red_nether_bricks",
+      "special_case": [{
+        "use": "brush",
+        "sound": "block.nether_bricks.place",
+        "converts_to": "nether_bricks"
+      }]
+    },
+    "gui": {
+      "self": "red_nether_bricks",
+      "special_case": [{
+        "use": "brush",
+        "sound": "block.nether_bricks.place",
+        "converts_to": "nether_bricks"
+      }]
+    },
+    "id": "red_nether_bricks"
+  },
+  {
+    "convertsTo": {
+      "self": "carved_pumpkin",
+      "special_case": [{
+        "use": "flint_and_steel",
+        "sound": "",
+        "converts_to": "jack_o_lantern"
+      }]
+    },
+    "gui": {
+      "self": "carved_pumpkin",
+      "special_case": [{
+        "use": "flint_and_steel",
+        "sound": "",
+        "converts_to": "jack_o_lantern"
+      }]
+    },
+    "id": "carved_pumpkin"
+  },
+  {
+    "convertsTo": {
+      "self": "jack_o_lantern",
+      "special_case": [{
+        "use": "water_bottle",
+        "sound": "",
+        "converts_to": "carved_pumpkin"
+      }]
+    },
+    "gui": {
+      "self": "jack_o_lantern",
+      "special_case": [{
+        "use": "water_bottle",
+        "sound": "",
+        "converts_to": "carved_pumpkin"
+      }]
+    },
+    "id": "jack_o_lantern",
+    "breaks_into": "carved_pumpkin"
+  },
+  {
+    "convertsTo": {
+      "self": "sponge",
+      "special_case": [{
+        "use": "water_bottle",
+        "sound": "",
+        "converts_to": "wet_sponge"
+      }]
+    },
+    "gui": {
+      "self": "sponge",
+      "special_case": [{
+        "use": "water_bottle",
+        "sound": "",
+        "converts_to": "wet_sponge"
+      }]
+    },
+    "id": "sponge"
+  },
+  {
+    "convertsTo": {
+      "self": "wet_sponge",
+      "special_case": [{
+        "use": "flint_and_steel",
+        "sound": "",
+        "converts_to": "sponge"
+      }]
+    },
+    "gui": {
+      "self": "wet_sponge",
+      "special_case": [{
+        "use": "flint_and_steel",
+        "sound": "",
+        "converts_to": "sponge"
+      }]
+    },
+    "id": "wet_sponge"
+  },
+  {
+    "id": "bricks",
+    "breaks_into": "bricks"
+  },
+  {
+    "id": "planks",
+    "breaks_into": "planks"
+  },
+  {
+    "id": "stripped_log",
+    "breaks_into": "log"
+  },
+  {
+    "id": "stripped_wood",
+    "breaks_into": "log"
+  },
+  {
+    "id": "stripped_bamboo_block",
+    "breaks_into": "bamboo_block"
+  },
+  {
+    "loot_type": "unobtainable",
+    "id": "budding_amethyst",
+    "breaks_into": "amethyst_block"
+  },
+  {
+    "loot_type": "unobtainable",
+    "id": "reinforced_deepslate",
+    "breaks_into": "cobbled_deepslate"
+  },
+  {
+    "loot_type": "shearable",
+    "id": "mangrove_roots",
+    "breaks_into": "stick"
+  },
+  {
+    "loot_type": "shearable",
+    "id": "nether_wart_block",
+    "breaks_into": "crimson_fungus"
+  },
+  {
+    "loot_type": "shearable",
+    "id": "warped_wart_block",
+    "breaks_into": "warped_fungus"
+  },
+  {
+    "loot_type": "shearable",
+    "id": "weeping_vines",
+    "breaks_into": "air"
+  },
+  {
+    "loot_type": "shearable",
+    "id": "twisting_vines",
+    "breaks_into": "air"
+  },
+  {
+    "loot_type": "shearable",
+    "id": "crimson_roots",
+    "breaks_into": "air"
+  },
+  {
+    "loot_type": "shearable",
+    "id": "warped_roots",
+    "breaks_into": "air"
+  }
+]

@@ -1,0 +1,15 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:placed_block",
+        "conditions": {
+          "player": [],
+          "location": []
+        }
+      }
+    },
+    "rewards": {
+      "function": "brush:place_block/run"
+    }
+  }
+  
