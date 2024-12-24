@@ -7,17 +7,6 @@
         "predicate": {
           "slots": {
             "weapon.*": {
-              "items": "minecraft:debug_stick"
-            }
-          }
-        }
-      },
-      {
-        "condition": "minecraft:entity_properties",
-        "entity": "this",
-        "predicate": {
-          "slots": {
-            "weapon.*": {
               "items": "minecraft:moss_block"
             }
           }

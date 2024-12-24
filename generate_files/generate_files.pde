@@ -1,7 +1,10 @@
 JSONArray blockRegistery = new JSONArray();
+JSONArray cutBlockRegistery = new JSONArray();
 
 void setup()
 {
+  //Do Auxillary Files first
+  generateAuxFiles();
   
   //Register Variants
   registerDefaultVariants();
@@ -11,7 +14,7 @@ void setup()
   //Generate Output Data
   loadSubtypes();
   setupGUIFunctions();
-  
+    
   for (int b = 0; b < blockRegistery.size(); b++)
   {
     //Custom Modifications
@@ -31,8 +34,12 @@ void setup()
   
   GUIFunctionsDone();
   
+  //Generate Cut Functions including place doubleslabs, 2 slabs to full block in inventory, and un-stonecutting
+  generateCutFunctions(cutBlockRegistery);
+  
   //Output block registery for debugging
   saveJSONArray(blockRegistery, "output/block_registery.json");
+  saveJSONArray(cutBlockRegistery, "output/cut_block_registery.json");
   exit();
 }
 

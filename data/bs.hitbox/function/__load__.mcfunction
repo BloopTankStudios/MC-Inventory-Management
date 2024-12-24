@@ -10,10 +10,12 @@ scoreboard objectives add bs.out dummy [{"text":"BS ","color":"dark_gray"},{"tex
 scoreboard objectives add bs.data dummy [{"text":"BS ","color":"dark_gray"},{"text":"Data","color":"aqua"}]
 scoreboard objectives add bs.const dummy [{"text":"BS ","color":"dark_gray"},{"text":"Constants","color":"aqua"}]
 
+scoreboard players set -1 bs.const -1
 scoreboard players set 2 bs.const 2
 scoreboard players set 11 bs.const 11
 scoreboard players set 15 bs.const 15
 scoreboard players set 255 bs.const 255
+scoreboard players set 500 bs.const 500
 scoreboard players set 1000 bs.const 1000
 scoreboard players set 65536 bs.const 65536
 scoreboard players set 3129871 bs.const 3129871

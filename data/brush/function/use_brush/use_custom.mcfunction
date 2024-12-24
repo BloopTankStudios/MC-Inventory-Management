@@ -15,21 +15,137 @@ execute if block ~ ~ ~ cobblestone if items entity @s weapon.* quartz run return
 execute if block ~ ~ ~ cobblestone if items entity @s weapon.* moss_block run particle minecraft:item{item:"moss_block"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
 execute if block ~ ~ ~ cobblestone if items entity @s weapon.* moss_block run playsound block.moss.place block @a ~.5 ~.5 ~.5 .5
 execute if block ~ ~ ~ cobblestone if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_cobblestone
+execute if block ~ ~ ~ cobblestone_stairs if items entity @s weapon.* quartz run particle minecraft:item{item:"quartz"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ cobblestone_stairs if items entity @s weapon.* quartz run playsound block.stone.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ cobblestone_stairs[facing=north,half=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ andesite_stairs[facing=north,half=top]
+execute if block ~ ~ ~ cobblestone_stairs[facing=east,half=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ andesite_stairs[facing=east,half=top]
+execute if block ~ ~ ~ cobblestone_stairs[facing=south,half=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ andesite_stairs[facing=south,half=top]
+execute if block ~ ~ ~ cobblestone_stairs[facing=west,half=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ andesite_stairs[facing=west,half=top]
+execute if block ~ ~ ~ cobblestone_stairs[facing=north,half=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ andesite_stairs[facing=north,half=bottom]
+execute if block ~ ~ ~ cobblestone_stairs[facing=east,half=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ andesite_stairs[facing=east,half=bottom]
+execute if block ~ ~ ~ cobblestone_stairs[facing=south,half=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ andesite_stairs[facing=south,half=bottom]
+execute if block ~ ~ ~ cobblestone_stairs[facing=west,half=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ andesite_stairs[facing=west,half=bottom]
+execute if block ~ ~ ~ cobblestone_stairs if items entity @s weapon.* moss_block run particle minecraft:item{item:"moss_block"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ cobblestone_stairs if items entity @s weapon.* moss_block run playsound block.moss.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ cobblestone_stairs[facing=north,half=top] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_cobblestone_stairs[facing=north,half=top]
+execute if block ~ ~ ~ cobblestone_stairs[facing=east,half=top] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_cobblestone_stairs[facing=east,half=top]
+execute if block ~ ~ ~ cobblestone_stairs[facing=south,half=top] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_cobblestone_stairs[facing=south,half=top]
+execute if block ~ ~ ~ cobblestone_stairs[facing=west,half=top] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_cobblestone_stairs[facing=west,half=top]
+execute if block ~ ~ ~ cobblestone_stairs[facing=north,half=bottom] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_cobblestone_stairs[facing=north,half=bottom]
+execute if block ~ ~ ~ cobblestone_stairs[facing=east,half=bottom] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_cobblestone_stairs[facing=east,half=bottom]
+execute if block ~ ~ ~ cobblestone_stairs[facing=south,half=bottom] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_cobblestone_stairs[facing=south,half=bottom]
+execute if block ~ ~ ~ cobblestone_stairs[facing=west,half=bottom] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_cobblestone_stairs[facing=west,half=bottom]
+execute if block ~ ~ ~ cobblestone_slab if items entity @s weapon.* quartz run particle minecraft:item{item:"quartz"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ cobblestone_slab if items entity @s weapon.* quartz run playsound block.stone.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ cobblestone_slab[type=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ andesite_slab[type=top]
+execute if block ~ ~ ~ cobblestone_slab[type=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ andesite_slab[type=bottom]
+execute if block ~ ~ ~ cobblestone_slab if items entity @s weapon.* moss_block run particle minecraft:item{item:"moss_block"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ cobblestone_slab if items entity @s weapon.* moss_block run playsound block.moss.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ cobblestone_slab[type=top] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_cobblestone_slab[type=top]
+execute if block ~ ~ ~ cobblestone_slab[type=bottom] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_cobblestone_slab[type=bottom]
+execute if block ~ ~ ~ cobblestone_wall if items entity @s weapon.* quartz run particle minecraft:item{item:"quartz"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ cobblestone_wall if items entity @s weapon.* quartz run playsound block.stone.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ cobblestone_wall if items entity @s weapon.* quartz run return run setblock ~ ~ ~ andesite_wall
+execute if block ~ ~ ~ cobblestone_wall if items entity @s weapon.* moss_block run particle minecraft:item{item:"moss_block"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ cobblestone_wall if items entity @s weapon.* moss_block run playsound block.moss.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ cobblestone_wall if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_cobblestone_wall
 execute if block ~ ~ ~ stone_bricks if items entity @s weapon.* moss_block run particle minecraft:item{item:"moss_block"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
 execute if block ~ ~ ~ stone_bricks if items entity @s weapon.* moss_block run playsound block.moss.place block @a ~.5 ~.5 ~.5 .5
 execute if block ~ ~ ~ stone_bricks if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_stone_bricks
+execute if block ~ ~ ~ stone_brick_stairs if items entity @s weapon.* moss_block run particle minecraft:item{item:"moss_block"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ stone_brick_stairs if items entity @s weapon.* moss_block run playsound block.moss.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ stone_brick_stairs[facing=north,half=top] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_stone_brick_stairs[facing=north,half=top]
+execute if block ~ ~ ~ stone_brick_stairs[facing=east,half=top] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_stone_brick_stairs[facing=east,half=top]
+execute if block ~ ~ ~ stone_brick_stairs[facing=south,half=top] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_stone_brick_stairs[facing=south,half=top]
+execute if block ~ ~ ~ stone_brick_stairs[facing=west,half=top] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_stone_brick_stairs[facing=west,half=top]
+execute if block ~ ~ ~ stone_brick_stairs[facing=north,half=bottom] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_stone_brick_stairs[facing=north,half=bottom]
+execute if block ~ ~ ~ stone_brick_stairs[facing=east,half=bottom] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_stone_brick_stairs[facing=east,half=bottom]
+execute if block ~ ~ ~ stone_brick_stairs[facing=south,half=bottom] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_stone_brick_stairs[facing=south,half=bottom]
+execute if block ~ ~ ~ stone_brick_stairs[facing=west,half=bottom] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_stone_brick_stairs[facing=west,half=bottom]
+execute if block ~ ~ ~ stone_brick_slab if items entity @s weapon.* moss_block run particle minecraft:item{item:"moss_block"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ stone_brick_slab if items entity @s weapon.* moss_block run playsound block.moss.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ stone_brick_slab[type=top] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_stone_brick_slab[type=top]
+execute if block ~ ~ ~ stone_brick_slab[type=bottom] if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_stone_brick_slab[type=bottom]
+execute if block ~ ~ ~ stone_brick_wall if items entity @s weapon.* moss_block run particle minecraft:item{item:"moss_block"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ stone_brick_wall if items entity @s weapon.* moss_block run playsound block.moss.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ stone_brick_wall if items entity @s weapon.* moss_block run return run setblock ~ ~ ~ mossy_stone_brick_wall
 execute if block ~ ~ ~ diorite if items entity @s weapon.* quartz run particle minecraft:item{item:"quartz"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
 execute if block ~ ~ ~ diorite if items entity @s weapon.* quartz run playsound block.stone.place block @a ~.5 ~.5 ~.5 .5
 execute if block ~ ~ ~ diorite if items entity @s weapon.* quartz run return run setblock ~ ~ ~ granite
+execute if block ~ ~ ~ diorite_stairs if items entity @s weapon.* quartz run particle minecraft:item{item:"quartz"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ diorite_stairs if items entity @s weapon.* quartz run playsound block.stone.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ diorite_stairs[facing=north,half=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ granite_stairs[facing=north,half=top]
+execute if block ~ ~ ~ diorite_stairs[facing=east,half=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ granite_stairs[facing=east,half=top]
+execute if block ~ ~ ~ diorite_stairs[facing=south,half=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ granite_stairs[facing=south,half=top]
+execute if block ~ ~ ~ diorite_stairs[facing=west,half=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ granite_stairs[facing=west,half=top]
+execute if block ~ ~ ~ diorite_stairs[facing=north,half=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ granite_stairs[facing=north,half=bottom]
+execute if block ~ ~ ~ diorite_stairs[facing=east,half=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ granite_stairs[facing=east,half=bottom]
+execute if block ~ ~ ~ diorite_stairs[facing=south,half=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ granite_stairs[facing=south,half=bottom]
+execute if block ~ ~ ~ diorite_stairs[facing=west,half=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ granite_stairs[facing=west,half=bottom]
+execute if block ~ ~ ~ diorite_slab if items entity @s weapon.* quartz run particle minecraft:item{item:"quartz"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ diorite_slab if items entity @s weapon.* quartz run playsound block.stone.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ diorite_slab[type=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ granite_slab[type=top]
+execute if block ~ ~ ~ diorite_slab[type=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ granite_slab[type=bottom]
+execute if block ~ ~ ~ diorite_wall if items entity @s weapon.* quartz run particle minecraft:item{item:"quartz"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ diorite_wall if items entity @s weapon.* quartz run playsound block.stone.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ diorite_wall if items entity @s weapon.* quartz run return run setblock ~ ~ ~ granite_wall
 execute if block ~ ~ ~ andesite if items entity @s weapon.* quartz run particle minecraft:item{item:"quartz"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
 execute if block ~ ~ ~ andesite if items entity @s weapon.* quartz run playsound block.stone.place block @a ~.5 ~.5 ~.5 .5
 execute if block ~ ~ ~ andesite if items entity @s weapon.* quartz run return run setblock ~ ~ ~ diorite
+execute if block ~ ~ ~ andesite_stairs if items entity @s weapon.* quartz run particle minecraft:item{item:"quartz"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ andesite_stairs if items entity @s weapon.* quartz run playsound block.stone.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ andesite_stairs[facing=north,half=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ diorite_stairs[facing=north,half=top]
+execute if block ~ ~ ~ andesite_stairs[facing=east,half=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ diorite_stairs[facing=east,half=top]
+execute if block ~ ~ ~ andesite_stairs[facing=south,half=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ diorite_stairs[facing=south,half=top]
+execute if block ~ ~ ~ andesite_stairs[facing=west,half=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ diorite_stairs[facing=west,half=top]
+execute if block ~ ~ ~ andesite_stairs[facing=north,half=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ diorite_stairs[facing=north,half=bottom]
+execute if block ~ ~ ~ andesite_stairs[facing=east,half=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ diorite_stairs[facing=east,half=bottom]
+execute if block ~ ~ ~ andesite_stairs[facing=south,half=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ diorite_stairs[facing=south,half=bottom]
+execute if block ~ ~ ~ andesite_stairs[facing=west,half=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ diorite_stairs[facing=west,half=bottom]
+execute if block ~ ~ ~ andesite_slab if items entity @s weapon.* quartz run particle minecraft:item{item:"quartz"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ andesite_slab if items entity @s weapon.* quartz run playsound block.stone.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ andesite_slab[type=top] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ diorite_slab[type=top]
+execute if block ~ ~ ~ andesite_slab[type=bottom] if items entity @s weapon.* quartz run return run setblock ~ ~ ~ diorite_slab[type=bottom]
+execute if block ~ ~ ~ andesite_wall if items entity @s weapon.* quartz run particle minecraft:item{item:"quartz"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ andesite_wall if items entity @s weapon.* quartz run playsound block.stone.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ andesite_wall if items entity @s weapon.* quartz run return run setblock ~ ~ ~ diorite_wall
 execute if block ~ ~ ~ nether_bricks if items entity @s weapon.* nether_wart run particle minecraft:item{item:"nether_wart"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
 execute if block ~ ~ ~ nether_bricks if items entity @s weapon.* nether_wart run playsound block.nether_bricks.place block @a ~.5 ~.5 ~.5 .5
 execute if block ~ ~ ~ nether_bricks if items entity @s weapon.* nether_wart run return run setblock ~ ~ ~ red_nether_bricks
-execute if block ~ ~ ~ end_stone_bricks if items entity @s weapon.* minecraft:debug_stick[minecraft:custom_model_data=2] run particle minecraft:item{item:"chorus_fruit"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
-execute if block ~ ~ ~ end_stone_bricks if items entity @s weapon.* minecraft:debug_stick[minecraft:custom_model_data=2] run playsound item.crop.plant block @a ~.5 ~.5 ~.5 .5
-execute if block ~ ~ ~ end_stone_bricks if items entity @s weapon.* minecraft:debug_stick[minecraft:custom_model_data=2] run return run setblock ~ ~ ~ purpur_block
+execute if block ~ ~ ~ nether_brick_stairs if items entity @s weapon.* nether_wart run particle minecraft:item{item:"nether_wart"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ nether_brick_stairs if items entity @s weapon.* nether_wart run playsound block.nether_bricks.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ nether_brick_stairs[facing=north,half=top] if items entity @s weapon.* nether_wart run return run setblock ~ ~ ~ red_nether_brick_stairs[facing=north,half=top]
+execute if block ~ ~ ~ nether_brick_stairs[facing=east,half=top] if items entity @s weapon.* nether_wart run return run setblock ~ ~ ~ red_nether_brick_stairs[facing=east,half=top]
+execute if block ~ ~ ~ nether_brick_stairs[facing=south,half=top] if items entity @s weapon.* nether_wart run return run setblock ~ ~ ~ red_nether_brick_stairs[facing=south,half=top]
+execute if block ~ ~ ~ nether_brick_stairs[facing=west,half=top] if items entity @s weapon.* nether_wart run return run setblock ~ ~ ~ red_nether_brick_stairs[facing=west,half=top]
+execute if block ~ ~ ~ nether_brick_stairs[facing=north,half=bottom] if items entity @s weapon.* nether_wart run return run setblock ~ ~ ~ red_nether_brick_stairs[facing=north,half=bottom]
+execute if block ~ ~ ~ nether_brick_stairs[facing=east,half=bottom] if items entity @s weapon.* nether_wart run return run setblock ~ ~ ~ red_nether_brick_stairs[facing=east,half=bottom]
+execute if block ~ ~ ~ nether_brick_stairs[facing=south,half=bottom] if items entity @s weapon.* nether_wart run return run setblock ~ ~ ~ red_nether_brick_stairs[facing=south,half=bottom]
+execute if block ~ ~ ~ nether_brick_stairs[facing=west,half=bottom] if items entity @s weapon.* nether_wart run return run setblock ~ ~ ~ red_nether_brick_stairs[facing=west,half=bottom]
+execute if block ~ ~ ~ nether_brick_slab if items entity @s weapon.* nether_wart run particle minecraft:item{item:"nether_wart"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ nether_brick_slab if items entity @s weapon.* nether_wart run playsound block.nether_bricks.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ nether_brick_slab[type=top] if items entity @s weapon.* nether_wart run return run setblock ~ ~ ~ red_nether_brick_slab[type=top]
+execute if block ~ ~ ~ nether_brick_slab[type=bottom] if items entity @s weapon.* nether_wart run return run setblock ~ ~ ~ red_nether_brick_slab[type=bottom]
+execute if block ~ ~ ~ nether_brick_wall if items entity @s weapon.* nether_wart run particle minecraft:item{item:"nether_wart"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ nether_brick_wall if items entity @s weapon.* nether_wart run playsound block.nether_bricks.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ nether_brick_wall if items entity @s weapon.* nether_wart run return run setblock ~ ~ ~ red_nether_brick_wall
+execute if block ~ ~ ~ end_stone_bricks if items entity @s weapon.* chorus_fruit run particle minecraft:item{item:"chorus_fruit"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ end_stone_bricks if items entity @s weapon.* chorus_fruit run playsound item.crop.plant block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ end_stone_bricks if items entity @s weapon.* chorus_fruit run return run setblock ~ ~ ~ purpur_block
+execute if block ~ ~ ~ end_stone_brick_stairs if items entity @s weapon.* chorus_fruit run particle minecraft:item{item:"chorus_fruit"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ end_stone_brick_stairs if items entity @s weapon.* chorus_fruit run playsound item.crop.plant block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ end_stone_brick_stairs[facing=north,half=top] if items entity @s weapon.* chorus_fruit run return run setblock ~ ~ ~ purpur_stairs[facing=north,half=top]
+execute if block ~ ~ ~ end_stone_brick_stairs[facing=east,half=top] if items entity @s weapon.* chorus_fruit run return run setblock ~ ~ ~ purpur_stairs[facing=east,half=top]
+execute if block ~ ~ ~ end_stone_brick_stairs[facing=south,half=top] if items entity @s weapon.* chorus_fruit run return run setblock ~ ~ ~ purpur_stairs[facing=south,half=top]
+execute if block ~ ~ ~ end_stone_brick_stairs[facing=west,half=top] if items entity @s weapon.* chorus_fruit run return run setblock ~ ~ ~ purpur_stairs[facing=west,half=top]
+execute if block ~ ~ ~ end_stone_brick_stairs[facing=north,half=bottom] if items entity @s weapon.* chorus_fruit run return run setblock ~ ~ ~ purpur_stairs[facing=north,half=bottom]
+execute if block ~ ~ ~ end_stone_brick_stairs[facing=east,half=bottom] if items entity @s weapon.* chorus_fruit run return run setblock ~ ~ ~ purpur_stairs[facing=east,half=bottom]
+execute if block ~ ~ ~ end_stone_brick_stairs[facing=south,half=bottom] if items entity @s weapon.* chorus_fruit run return run setblock ~ ~ ~ purpur_stairs[facing=south,half=bottom]
+execute if block ~ ~ ~ end_stone_brick_stairs[facing=west,half=bottom] if items entity @s weapon.* chorus_fruit run return run setblock ~ ~ ~ purpur_stairs[facing=west,half=bottom]
+execute if block ~ ~ ~ end_stone_brick_slab if items entity @s weapon.* chorus_fruit run particle minecraft:item{item:"chorus_fruit"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ end_stone_brick_slab if items entity @s weapon.* chorus_fruit run playsound item.crop.plant block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ end_stone_brick_slab[type=top] if items entity @s weapon.* chorus_fruit run return run setblock ~ ~ ~ purpur_slab[type=top]
+execute if block ~ ~ ~ end_stone_brick_slab[type=bottom] if items entity @s weapon.* chorus_fruit run return run setblock ~ ~ ~ purpur_slab[type=bottom]
 execute if block ~ ~ ~ oak_log if items entity @s weapon.* stick run particle minecraft:item{item:"stick"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
 execute if block ~ ~ ~ oak_log if items entity @s weapon.* stick run playsound block.wood.place block @a ~.5 ~.5 ~.5 .5
 execute if block ~ ~ ~ oak_log[axis=x] if items entity @s weapon.* stick run return run setblock ~ ~ ~ oak_wood[axis=x]
@@ -83,6 +199,20 @@ execute if block ~ ~ ~ warped_stem[axis=z] if items entity @s weapon.* stick run
 execute if block ~ ~ ~ bamboo_planks if items entity @s weapon.* bamboo run particle minecraft:item{item:"bamboo"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
 execute if block ~ ~ ~ bamboo_planks if items entity @s weapon.* bamboo run playsound block.bamboo_wood.place block @a ~.5 ~.5 ~.5 .5
 execute if block ~ ~ ~ bamboo_planks if items entity @s weapon.* bamboo run return run setblock ~ ~ ~ bamboo_mosaic
+execute if block ~ ~ ~ bamboo_stairs if items entity @s weapon.* bamboo run particle minecraft:item{item:"bamboo"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ bamboo_stairs if items entity @s weapon.* bamboo run playsound block.bamboo_wood.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ bamboo_stairs[facing=north,half=top] if items entity @s weapon.* bamboo run return run setblock ~ ~ ~ bamboo_mosaic_stairs[facing=north,half=top]
+execute if block ~ ~ ~ bamboo_stairs[facing=east,half=top] if items entity @s weapon.* bamboo run return run setblock ~ ~ ~ bamboo_mosaic_stairs[facing=east,half=top]
+execute if block ~ ~ ~ bamboo_stairs[facing=south,half=top] if items entity @s weapon.* bamboo run return run setblock ~ ~ ~ bamboo_mosaic_stairs[facing=south,half=top]
+execute if block ~ ~ ~ bamboo_stairs[facing=west,half=top] if items entity @s weapon.* bamboo run return run setblock ~ ~ ~ bamboo_mosaic_stairs[facing=west,half=top]
+execute if block ~ ~ ~ bamboo_stairs[facing=north,half=bottom] if items entity @s weapon.* bamboo run return run setblock ~ ~ ~ bamboo_mosaic_stairs[facing=north,half=bottom]
+execute if block ~ ~ ~ bamboo_stairs[facing=east,half=bottom] if items entity @s weapon.* bamboo run return run setblock ~ ~ ~ bamboo_mosaic_stairs[facing=east,half=bottom]
+execute if block ~ ~ ~ bamboo_stairs[facing=south,half=bottom] if items entity @s weapon.* bamboo run return run setblock ~ ~ ~ bamboo_mosaic_stairs[facing=south,half=bottom]
+execute if block ~ ~ ~ bamboo_stairs[facing=west,half=bottom] if items entity @s weapon.* bamboo run return run setblock ~ ~ ~ bamboo_mosaic_stairs[facing=west,half=bottom]
+execute if block ~ ~ ~ bamboo_slab if items entity @s weapon.* bamboo run particle minecraft:item{item:"bamboo"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
+execute if block ~ ~ ~ bamboo_slab if items entity @s weapon.* bamboo run playsound block.bamboo_wood.place block @a ~.5 ~.5 ~.5 .5
+execute if block ~ ~ ~ bamboo_slab[type=top] if items entity @s weapon.* bamboo run return run setblock ~ ~ ~ bamboo_mosaic_slab[type=top]
+execute if block ~ ~ ~ bamboo_slab[type=bottom] if items entity @s weapon.* bamboo run return run setblock ~ ~ ~ bamboo_mosaic_slab[type=bottom]
 execute if block ~ ~ ~ gravel if items entity @s weapon.* quartz run particle minecraft:item{item:"quartz"} ~.5 ~.5 ~.5 .35 .35 .35 .01 40
 execute if block ~ ~ ~ gravel if items entity @s weapon.* quartz run playsound block.stone.place block @a ~.5 ~.5 ~.5 .5
 execute if block ~ ~ ~ gravel if items entity @s weapon.* quartz run return run setblock ~ ~ ~ cobblestone

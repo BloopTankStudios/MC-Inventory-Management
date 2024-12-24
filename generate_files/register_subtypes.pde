@@ -6,15 +6,13 @@ ArrayList<String> attributeBlocks = new ArrayList<String>();
 
 ArrayList<String> cutBlocks = new ArrayList<String>();
 
-String[] directionalBlocks = new String[] { "carved_pumpkin", "jack_o_lantern" };
-
 void loadSubtypes()
 {
   allBlocks = loadJSONArray("minecraft/data.json").toStringArray();
   for (String block : allBlocks)
   {
     //Only add those that are needed
-    if (match(block, "_stairs") != null || match(block, "_slab") != null || match(block, "_wall") != null || match(block, "_fence") != null || match(block, "_plant") != null)
+    if (match(block, "_stairs") != null || match(block, "_slab") != null || match(block, "_wall") != null || match(block, "_fence") != null)
       cutBlocks.add(block);
     if (match(block, "_plant") != null || match(block, "cracked_") != null || match(block, "mossy_") != null)
       attributeBlocks.add(block);
@@ -39,21 +37,26 @@ JSONArray registerSubtypes(JSONObject block)
     blocks.append(block);
     
     //Block Lookup for generic subtypes
-    for (String str : attributeBlocks)
-    {
-      //Plants
-      if (str.equals(block.getString("id") + "_plant"))
-        blocks.append(registerPlantSubtype(block));
-        
-      //Attributes
-      if (str.equals("cracked_" + block.getString("id")))
-        blocks.append(registerAttributeSubtype(block, "cracked"));
-      if (str.equals("mossy_" + block.getString("id")))
-        blocks.append(registerAttributeSubtype(block, "mossy"));
-    }
+    if (attributeBlocks.contains(block.getString("id") + "_plant"))
+      blocks.append(registerPlantSubtype(block));
+    
+    if (attributeBlocks.contains("cracked_" + block.getString("id")))
+      blocks.append(registerAttributeSubtype(block, "cracked"));
+    if (attributeBlocks.contains("mossy_" + block.getString("id")))
+      blocks.append(registerAttributeSubtype(block, "mossy"));
   }
   
-  return blocks;
+  //Loop after other subtypes for stair/slab/wall/fence subtypes
+  JSONArray cutBlocks = new JSONArray();
+  
+  for (int i = 0; i < blocks.size(); i++)
+  {
+    cutBlocks.append(blocks.getJSONObject(i));
+    //Block Lookup for stair/slab/wall/fence
+    registerCutSubtypes(cutBlocks, blocks.getJSONObject(i));
+  }
+  
+  return cutBlocks;
 }
 
 JSONArray registerWoodSubtypes(JSONObject block)
@@ -170,6 +173,163 @@ JSONObject registerAttributeSubtype(JSONObject block, String attribute)
   return newBlock;
 }
 
+void registerCutSubtypes(JSONArray blocks, JSONObject block)
+{
+  String id = block.getString("id");
+  if (id.endsWith("bricks") || id.endsWith("tiles"))
+    id = id.substring(0, id.length() - 1);
+  else if (id.endsWith("_block"))
+    id = id.substring(0, id.length() - 6);
+  else if (id.endsWith("_planks"))
+    id = id.substring(0, id.length() - 7);
+  
+  //Checks
+  boolean hasStair = cutBlocks.contains(id + "_stairs");
+  boolean hasSlab = cutBlocks.contains(id + "_slab");
+  boolean hasWall = cutBlocks.contains(id + "_wall");
+  boolean hasFence = cutBlocks.contains(id + "_fence");
+  
+  if (!hasStair && !hasSlab)
+    return;
+  
+  if (block.isNull("gui"))
+  {
+    JSONObject self = new JSONObject();
+    self.setString("self", block.getString("id"));
+    block.setJSONObject("gui", self);
+    block.setJSONObject("convertsTo", self);
+  }
+  
+  if (block.isNull("breaks_into"))
+    block.setString("breaks_into", block.getString("id"));
+  
+  JSONObject stonecutterBlocks;
+  JSONArray blockList;
+  JSONObject stairBlock = null;
+  JSONObject slabBlock = null;
+  JSONObject wallBlock = null;
+  
+  //Cut Block Registery for Later
+  JSONObject cutBlock = new JSONObject();
+  cutBlock.setString("block", block.getString("id"));
+  cutBlock.setString("item", block.getString("breaks_into"));
+  
+  //Stair Initialization
+  if (hasStair)
+  { 
+    stairBlock = modifyNameAffix(block, "_stairs");
+    stairBlock.setString("breaks_into", block.getString("breaks_into"));
+    blocks.append(stairBlock);
+    
+    blockList = new JSONArray();
+    blockList.append(id + "_stairs");
+    stonecutterBlocks = new JSONObject();
+    stonecutterBlocks.setJSONArray("blocks", blockList);
+    
+    block.getJSONObject("gui").setJSONObject("stonecutter", stonecutterBlocks);
+    block.getJSONObject("convertsTo").setJSONObject("stonecutter", stonecutterBlocks);
+    
+    cutBlock.setString("stairs", stairBlock.getString("id"));
+  }
+  
+  if (hasSlab)
+  {
+    slabBlock = modifyNameAffix(block, "_slab");
+    if (!slabBlock.getJSONObject("gui").isNull("stonecutter"))
+    {
+      slabBlock.getJSONObject("gui").remove("stonecutter");
+      slabBlock.getJSONObject("convertsTo").remove("stonecutter");
+    }
+    if (!validId(slabBlock.getString("breaks_into")))
+    {
+      slabBlock.setString("breaks_into", slabBlock.getString("id"));
+      cutBlock.setBoolean("isBaseSlab", true);
+    }
+    blocks.append(slabBlock);
+    
+    blockList = new JSONArray();
+    blockList.append(id + "_slab");
+    stonecutterBlocks = new JSONObject();
+    stonecutterBlocks.setString("item", slabBlock.getString("breaks_into"));
+    stonecutterBlocks.setJSONArray("blocks", blockList);
+    
+    if (hasStair)
+    {
+      stairBlock.getJSONObject("gui").setJSONObject("stonecutter", stonecutterBlocks);
+      stairBlock.getJSONObject("convertsTo").setJSONObject("stonecutter", stonecutterBlocks);
+    }
+    else
+    {
+      block.getJSONObject("gui").setJSONObject("stonecutter", stonecutterBlocks);
+      block.getJSONObject("convertsTo").setJSONObject("stonecutter", stonecutterBlocks);
+    }
+    
+    cutBlock.setString("slab", slabBlock.getString("id"));
+    cutBlock.setString("slab_item", slabBlock.getString("breaks_into"));
+    if (cutBlock.isNull("isBaseSlab"))
+      cutBlock.setBoolean("isBaseSlab", slabBlock.getString("id").equals(slabBlock.getString("breaks_into")));
+  }
+  
+  if (hasWall)
+  {
+    wallBlock = modifyNameAffix(block, "_wall");
+    if (!wallBlock.getJSONObject("gui").isNull("stonecutter"))
+    {
+      wallBlock.getJSONObject("gui").remove("stonecutter");
+      wallBlock.getJSONObject("convertsTo").remove("stonecutter");
+    }
+    wallBlock.setString("breaks_into", slabBlock.getString("breaks_into"));
+    blocks.append(wallBlock);
+    
+    blockList = new JSONArray();
+    blockList.append(id + "_slab");
+    blockList.append(id + "_wall");
+    stonecutterBlocks = new JSONObject();
+    stonecutterBlocks.setString("item", wallBlock.getString("breaks_into"));
+    stonecutterBlocks.setJSONArray("blocks", blockList);
+    
+    stairBlock.getJSONObject("gui").setJSONObject("stonecutter", stonecutterBlocks);
+    stairBlock.getJSONObject("convertsTo").setJSONObject("stonecutter", stonecutterBlocks);
+    
+    cutBlock.setString("wall", wallBlock.getString("id"));
+  }
+  
+  if (hasFence)
+  {
+    JSONObject fenceBlock = modifyNameAffix(block, "_fence");
+    if (!fenceBlock.getJSONObject("gui").isNull("stonecutter"))
+    {
+      fenceBlock.getJSONObject("gui").remove("stonecutter");
+      fenceBlock.getJSONObject("convertsTo").remove("stonecutter");
+    }
+    fenceBlock.setString("breaks_into", slabBlock.getString("breaks_into"));
+    blocks.append(fenceBlock);
+    
+    blockList = new JSONArray();
+    if (!hasWall)
+      blockList.append(id + "_slab");
+    blockList.append(id + "_fence");
+    stonecutterBlocks = new JSONObject();
+    stonecutterBlocks.setString("item", fenceBlock.getString("breaks_into"));
+    stonecutterBlocks.setJSONArray("blocks", blockList);
+    
+    if (hasWall)
+    {
+      wallBlock.getJSONObject("gui").setJSONObject("stonecutter", stonecutterBlocks);
+      wallBlock.getJSONObject("convertsTo").setJSONObject("stonecutter", stonecutterBlocks);
+    }
+    else
+    {
+      stairBlock.getJSONObject("gui").setJSONObject("stonecutter", stonecutterBlocks);
+      stairBlock.getJSONObject("convertsTo").setJSONObject("stonecutter", stonecutterBlocks);
+    }
+    
+    cutBlock.setString("fence", fenceBlock.getString("id"));
+  }
+  
+  cutBlockRegistery.append(cutBlock);
+}
+
 JSONObject modifyNamePrefix(JSONObject block, String prefix)
 {
   String[] blockStr = block.toString().split("\n");
@@ -178,6 +338,12 @@ JSONObject modifyNamePrefix(JSONObject block, String prefix)
   
   for (String line : blockStr)
   {
+    if (line.contains("use") || line.contains("sound"))
+    {
+      newBlock += line;
+      continue;
+    }
+    
     if ((prefix.equals("") || prefix.equals("waxed_")) && match(line, "\"copper\"") != null)
       line = stringReplace(line, "copper", "copper_block");
       
@@ -200,9 +366,47 @@ JSONObject modifyNamePrefix(JSONObject block, String prefix)
   return jsonBlock;
 }
 
+JSONObject modifyNameAffix(JSONObject block, String affix)
+{
+  String[] blockStr = block.toString().split("\n");
+  String newBlock = "";
+  
+  for (String line : blockStr)
+  {
+    if (line.contains("use") || line.contains("sound"))
+    {
+      newBlock += line;
+      continue;
+    }
+    
+    line = stringReplace(line, "bricks", "brick");
+    line = stringReplace(line, "tiles", "tile");
+    line = stringReplace(line, "_block", "");
+    line = stringReplace(line, "_planks", "");
+    
+    if (line.endsWith("\","))
+      newBlock += line.substring(0,line.length() - 2) + affix + "\",";
+    else if (line.endsWith("\""))
+      newBlock += line.substring(0,line.length() - 1) + affix + "\"";
+    else if (line.endsWith("\"],"))
+      newBlock += line.substring(0,line.length() - 3) + affix + "\"],";
+    else if (line.endsWith("\"]"))
+      newBlock += line.substring(0,line.length() - 2) + affix + "\"]";
+    else
+      newBlock += line;
+  }
+  
+  JSONObject jsonBlock = parseJSONObject(newBlock);
+  jsonBlock.setJSONObject("convertsTo", jsonBlock.getJSONObject("gui"));
+  jsonBlock.setJSONObject("gui", parseJSONObject(block.getJSONObject("gui").toString()));
+  return jsonBlock;
+}
+
 boolean validId(String block)
 {
   boolean valid = false;
+  if (block.equals("smooth_stone_double_slab"))
+    return true;
   for (String str : allBlocks)
     if (block.equals(str))
       valid = true;
@@ -212,48 +416,55 @@ boolean validId(String block)
 StringList loadBlockStates(String block)
 {
   StringList blocks = new StringList();
-  blocks.append(block);
-  
+
+  //Double Slab
   if (match(block, "_double_slab") != null)
   {
-    blocks.set(0, stringReplace(block, "_double_slab", "_slab[type=double]"));
+    blocks.append(stringReplace(block, "_double_slab", "_slab[type=double]"));
+    return blocks;
+  }
+  
+  //Stairs
+  if (block.endsWith("stairs"))
+  {
+    for (int i = 0; i < 2; i++)
+    {
+      blocks.append(block + "[facing=north,half=" + (i == 0 ? "top" : "bottom") + "]");
+      blocks.append(block + "[facing=east,half=" + (i == 0 ? "top" : "bottom") + "]");
+      blocks.append(block + "[facing=south,half=" + (i == 0 ? "top" : "bottom") + "]");
+      blocks.append(block + "[facing=west,half=" + (i == 0 ? "top" : "bottom") + "]");
+    }
+    return blocks;
+  }
+  
+  //Slabs
+  if (block.endsWith("slab"))
+  {
+    blocks.append(block + "[type=top]");
+    blocks.append(block + "[type=bottom]");
     return blocks;
   }
   
   //Directional Block
-  boolean directionalBlock = false;
-  for (int i = 0; i < directionalBlocks.length; i++)
-    if (block.equals(directionalBlocks[i]))
-    {
-      directionalBlock = true;
-      break;
-    }
-    
-  if (directionalBlock)
+  if (block.equals("carved_pumpkin") || block.equals("jack_o_lantern"))
   {
-    String[] currBlocks = blocks.toArray();
-    blocks.clear();
-    for (String newBlock : currBlocks)
-    {
-      blocks.append(newBlock + "[facing=north]");
-      blocks.append(newBlock + "[facing=east]");
-      blocks.append(newBlock + "[facing=south]");
-      blocks.append(newBlock + "[facing=west]");
-    }
+    blocks.append(block + "[facing=north]");
+    blocks.append(block + "[facing=east]");
+    blocks.append(block + "[facing=south]");
+    blocks.append(block + "[facing=west]");
+    return blocks;
   }
   
   //Axis Block
   if (match(block, "log") != null || match(block, "wood") != null || match(block, "stem") != null || match(block, "hyphae") != null || block.equals("basalt") || block.equals("polished_basalt"))
   {
-    String[] currBlocks = blocks.toArray();
-    blocks.clear();
-    for (String newBlock : currBlocks)
-    {
-      blocks.append(newBlock + "[axis=x]");
-      blocks.append(newBlock + "[axis=y]");
-      blocks.append(newBlock + "[axis=z]");
-    }
+    blocks.append(block + "[axis=x]");
+    blocks.append(block + "[axis=y]");
+    blocks.append(block + "[axis=z]");
+    return blocks;
   }
   
+  //No subtypes
+  blocks.append(block);
   return blocks;
 }

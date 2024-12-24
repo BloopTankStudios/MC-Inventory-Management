@@ -3,7 +3,7 @@ WriterDict blockTags = new WriterDict();
 
 void setupGUIFunctions()
 {
-  displayGUI = createWriter("../data/brush/function/gui/display_gui.mcfunction");
+  displayGUI = createWriter("../data/brush/function/gui/brush_gui.mcfunction");
   displayGUI.println("# Auto Generated");
   displayGUI.println();
   
@@ -12,8 +12,14 @@ void setupGUIFunctions()
   blockTags.append("flint_and_steel", createWriter("../data/brush/tags/block/fire_variant_block.json"), createWriter("../data/brush/function/use_brush/use_fire.mcfunction"));
   blockTags.append("honeycomb", createWriter("../data/brush/tags/block/honeycomb_variant_block.json"), createWriter("../data/brush/function/use_brush/use_honeycomb.mcfunction"));
   blockTags.append("iron_pickaxe", createWriter("../data/brush/tags/block/pickaxe_variant_block.json"), createWriter("../data/brush/function/use_brush/use_pickaxe.mcfunction"));
+  
+  blockTags.append("sc_stairs", createWriter("../data/brush/tags/block/sc_stairs_variant.json"), createWriter("../data/brush/function/use_brush/use_sc_to_stairs.mcfunction"));
+  blockTags.append("sc_slab_wall", createWriter("../data/brush/tags/block/sc_slab_wall_variant.json"), createWriter("../data/brush/function/use_brush/use_sc_to_slab_or_wall.mcfunction"));
+  blockTags.append("sc_fence", createWriter("../data/brush/tags/block/sc_fence_variant.json"), createWriter("../data/brush/function/use_brush/use_sc_to_fence.mcfunction"));
+  
   blockTags.append("dye", createWriter("../data/brush/tags/block/dyable_variant_block.json"), createWriter("../data/brush/function/use_brush/use_dye.mcfunction"));
   blockTags.append("other", createWriter("../data/brush/tags/block/custom_variant_block.json"), createWriter("../data/brush/function/use_brush/use_custom.mcfunction"));
+  
   blockTags.endAppend();
 }
 
@@ -27,10 +33,9 @@ void GUIFunctionsDone()
 
 void generateGUIFunction(JSONObject block)
 {
-  //println(block.getString("id"));
   if (block.isNull("gui"))
     return;
-  
+    
   int slotCount = 0;
   int groupCount = 0;
   
@@ -94,19 +99,18 @@ void generateGUIFunction(JSONObject block)
           
         function += "{\"translate\":\"bgui.block." + blocks[i] + "\"}, ";
         
-        if (!isBlock)
-        {
-          if (i == 0)
+        if (!isBlock && i == 0)
             function += "{\"translate\":\"bgui.using.water_bottle\"}, ";
-          else if (i == blocks.length - 1)
-            function += "{\"translate\":\"bgui.using.flint_and_steel\"}, ";
-        }
+            
         slotCount++;
         valid = true;
       }
     
     if (valid)
     {
+      if (function.lastIndexOf("bgui.slot.current") < function.lastIndexOf("bgui.slot") && blocks.length > 1)
+        function += "{\"translate\":\"bgui.using.flint_and_steel\"}, ";
+      
       function += "{\"translate\":\"bgui.align.space\"}, ";
       groupCount++;
   
@@ -118,7 +122,7 @@ void generateGUIFunction(JSONObject block)
         if (selfIndex < blocks.length - 1)
           blockTags.addBlock("flint_and_steel", block.getString("id"), converts[selfIndex + 1]);
       }
-      else if (guiInfo.getJSONArray("water_to_waxed").getString(0).equals(block.getString("id")))
+      else if (convertInfo.getJSONArray("water_to_waxed").getString(0).equals(block.getString("id")))
         blockTags.addBlock("water_bottle", block.getString("id"), converts[0]);
     }
   }
@@ -160,6 +164,9 @@ void generateGUIFunction(JSONObject block)
       
     if (valid)
     {
+      if (!function.contains("honeycomb") && function.lastIndexOf("bgui.slot.current") < function.lastIndexOf("bgui.slot") && blocks.length > 1)
+        function += "{\"translate\":\"bgui.using.honeycomb\"}, ";
+      
       function += "{\"translate\":\"bgui.align.space\"}, ";
       groupCount++;
       
@@ -232,7 +239,6 @@ void generateGUIFunction(JSONObject block)
     for (int i = 0; i < blocks.size(); i++)
       if (validId(converts.getJSONObject(i).getString("block")))
       {
-        println("->" + converts.getJSONObject(i).getString("block"));
         function += "{\"translate\":\"bgui.slot\"}, ";
         function += "{\"translate\":\"bgui.block." + blocks.getJSONObject(i).getString("block") + "\"}, ";
          
@@ -247,6 +253,34 @@ void generateGUIFunction(JSONObject block)
       }
   }
   
+  if (!guiInfo.isNull("stonecutter"))
+  {
+    function += "{\"translate\":\"bgui.slot\"}, ";
+    slotCount++;
+    String[] scBlocks = convertInfo.getJSONObject("stonecutter").getJSONArray("blocks").toStringArray();
+    
+    if (scBlocks[0].endsWith("stairs"))
+    {
+      blockTags.addBlock("sc_stairs", block.getString("id"), scBlocks[0]);
+      function += "{\"translate\":\"bgui.icon.stairs\"}, ";
+    }
+    else if (scBlocks[0].endsWith("slab"))
+    {
+      if (scBlocks.length == 1)
+        blockTags.addBlock_SlabWall(block.getString("id"), scBlocks[0], "", convertInfo.getJSONObject("stonecutter").getString("item"));
+      else
+        blockTags.addBlock_SlabWall(block.getString("id"), scBlocks[0], scBlocks[1], convertInfo.getJSONObject("stonecutter").getString("item"));
+      function += "{\"translate\":\"bgui.icon.slab\"}, ";
+    }
+    else if (scBlocks[0].endsWith("fence"))
+    {
+      blockTags.addBlock("sc_fence", block.getString("id"), scBlocks[0]);
+      function += "{\"translate\":\"bgui.icon.fence\"}, ";
+    }
+    
+    function += "{\"translate\":\"bgui.using.stonecutter\"}, ";
+  }
+  
   //Check that special cases has been used
   if (!specialCases.equals("") && split(function, specialCases).length == 1)
   {
@@ -256,6 +290,7 @@ void generateGUIFunction(JSONObject block)
     function += specialCases;
   }
   
+  
   //Temp
   //function += "{\"translate\":\"bgui.slot.normal\"}, {\"translate\":\"bgui.block." + block.getString("id") + "\"}, ";
   
@@ -264,6 +299,19 @@ void generateGUIFunction(JSONObject block)
   
   function += "{\"translate\":\"bgui.align.count_" + slotCount + "\"}]";
   
+  //Specific Function manipulation
+  if (block.getString("id").equals("smooth_stone_slab"))
+  {
+    displayGUI.println(stringReplace(function, "smooth_stone_slab", "smooth_stone_slab[type=top]"));
+    function = stringReplace(function, "smooth_stone_slab", "smooth_stone_slab[type=bottom]");
+  }
+  if (!guiInfo.isNull("stonecutter") && convertInfo.getJSONObject("stonecutter").getJSONArray("blocks").size() > 1)
+  {
+    String secondIcon = (convertInfo.getJSONObject("stonecutter").getJSONArray("blocks").getString(1).endsWith("wall") ? "wall" : "fence");
+    displayGUI.println("execute if score gui_anim inventory.brush matches ..29" + function.substring(7));
+    function = "execute if score gui_anim inventory.brush matches 30.." + stringReplace(function.substring(7), "{\"translate\":\"bgui.icon.slab\"}, ", "{\"translate\":\"bgui.icon." + secondIcon + "\"}, ");
+  }
+
   //Store Value
   displayGUI.println(function);
 }
@@ -336,8 +384,6 @@ class WriterDict
       return;
     
     String customKey = key;
-    if (key.equals("chorus_fruit"))
-      customKey = "minecraft:debug_stick[minecraft:custom_model_data=2]";
     if (match(key, "dye") != null)
       key = "dye";
     
@@ -365,17 +411,14 @@ class WriterDict
           tagValues.get(i).print(",\n\"" + id + "\"");
         hasWrittenTo[i] = true;
         
+        //Displays Block Particles
+        if (keys.get(i).equals("brush") || keys.get(i).equals("iron_pickaxe") || keys.get(i).startsWith("sc_"))
+          functionValues.get(i).println("execute if block ~ ~ ~ " + id +
+            " run particle minecraft:block{block_state:\"" + id + "\"} ~.5 ~.5 ~.5 .35 .35 .35 1 40");
+        
         //Special Cases
         switch (keys.get(i))
         {
-          case "brush":
-            functionValues.get(i).println("execute if block ~ ~ ~ " + id +
-              " run particle minecraft:block{block_state:\"" + id + "\"} ~.5 ~.5 ~.5 .35 .35 .35 1 40");
-            break;
-          case "iron_pickaxe":
-            functionValues.get(i).println("execute if block ~ ~ ~ " + id +
-              " run particle minecraft:block{block_state:\"" + id + "\"} ~.5 ~.5 ~.5 .35 .35 .35 1 40");
-            break;
           case "dye":
             switch (customKey)
             {
@@ -403,8 +446,11 @@ class WriterDict
         
         for (int b = 0; b < idBlockStates.size(); b++)
         {
+          if (keys.get(i).equals("sc_stairs"))
+            functionValues.get(i).println("$execute if block ~ ~ ~ " + idBlockStates.get(b) +
+              " run return run setblock ~ ~ ~ " + convertBlockStates.get(b) + "[half=$(half),facing=$(facing)]");
           //Write Main Function
-          if (i < keys.size() - 2)
+          else if (i < keys.size() - 2)
             functionValues.get(i).println("execute if block ~ ~ ~ " + idBlockStates.get(b) +
               " run return run setblock ~ ~ ~ " + convertBlockStates.get(b));
           //Dyes & Other
@@ -414,6 +460,49 @@ class WriterDict
         }
         return;
       }
+  }
+  
+  void addBlock_SlabWall(String id, String slab, String wall, String breaks_into_slab)
+  {
+    int i = 6;
+    
+    //Write BlockTag
+    if (!hasWrittenTo[i])
+      tagValues.get(i).print("\"" + id + "\"");
+    else
+      tagValues.get(i).print(",\n\"" + id + "\"");
+    hasWrittenTo[i] = true;
+    
+    //Particle
+    functionValues.get(i).println("execute if block ~ ~ ~ " + id +
+      " run particle minecraft:block{block_state:\"" + id + "\"} ~.5 ~.5 ~.5 .35 .35 .35 1 40");
+    
+    //Give back item
+    functionValues.get(i).println("execute if block ~ ~ ~ " + id + " at @s positioned ^ ^.5 ^1 run summon item ~ ~ ~ {Item:{id:\"minecraft:" + breaks_into_slab + "\",count:1}}");
+    
+    //Just Slab
+    if (wall.equals(""))
+    {
+      //Stairs to Slab
+      if (id.endsWith("stairs"))
+      {
+        functionValues.get(i).println("execute if block ~ ~ ~ " + id +
+          "[half=top] run return run setblock ~ ~ ~ " + slab + "[type=top]");
+        functionValues.get(i).println("execute if block ~ ~ ~ " + id +
+          "[half=bottom] run return run setblock ~ ~ ~ " + slab + "[type=bottom]");
+      }
+      //Block to Slab
+      else //<>//
+        functionValues.get(i).println("$execute if block ~ ~ ~ " + id +
+          " run return run setblock ~ ~ ~ " + slab + "[type=$(half)]");
+    }
+    else
+    {
+      functionValues.get(i).println("$execute if block ~ ~ ~ " + id +
+        "[half=$(half)] run return run setblock ~ ~ ~ " + slab + "[type=$(half)]");
+      functionValues.get(i).println("execute if block ~ ~ ~ " + id +
+        " run return run setblock ~ ~ ~ " + wall);
+    }
   }
   
   void close()
@@ -433,4 +522,72 @@ class WriterDict
       writer.close();
     }
   }
+}
+
+void generateCutFunctions(JSONArray cutBlocks)
+{
+  PrintWriter placeSlabs = createWriter("../data/brush/function/place_block/double_slab.mcfunction");
+  placeSlabs.println("# Auto Generated");
+  placeSlabs.println();
+  placeSlabs.println("advancement revoke @s only brush:place_double_slab");
+  placeSlabs.println();
+  
+  PrintWriter combineSlabs = createWriter("../data/brush/function/inventory/combine_slabs.mcfunction");
+  combineSlabs.println("# Auto Generated");
+  combineSlabs.println();
+  combineSlabs.println("advancement revoke @s only brush:has_double_slab");
+  combineSlabs.println();
+  
+  PrintWriter unStonecut = createWriter("../data/brush/function/use_brush/shift_stonecut.mcfunction");
+  unStonecut.println("# Auto Generated");
+  unStonecut.println();
+  
+  for (int i = 0; i < cutBlocks.size(); i++)
+  {
+    JSONObject cutBlock = cutBlocks.getJSONObject(i);
+    
+    if (!cutBlock.isNull("slab"))
+    {
+      //Place Double Slab turns into full block
+      if (!cutBlock.getString("block").equals("smooth_stone"))
+        placeSlabs.println("execute anchored eyes run fill ^-.5 ^ ^-1 ^.5 ^ ^4.5 " + cutBlock.getString("block") + " replace " + cutBlock.getString("slab") + "[type=double]");
+      
+      //Combine Slabs in the inventory
+      if (cutBlock.getBoolean("isBaseSlab"))
+      {
+        combineSlabs.println("data merge storage inventory:brush {give_items:{id:\"" + cutBlock.getString("item") + "\"}}");
+        combineSlabs.println("execute store result score slab_count inventory.brush store result score slab_remainder inventory.brush run execute " +
+          "unless entity @s[nbt={Inventory:[{id:\"minecraft:" + cutBlock.getString("slab") + "\",count:1}]}] run clear @p " + cutBlock.getString("slab"));
+        //combineSlabs.println("execute store result score slab_remainder inventory.brush run scoreboard players get slab_count inventory.brush");
+        combineSlabs.println("execute store result storage inventory:brush give_items.count int 1 run scoreboard players operation slab_count inventory.brush /= 2 inventory.brush");
+        combineSlabs.println("scoreboard players operation slab_remainder inventory.brush %= 2 inventory.brush");
+        combineSlabs.println("execute if score slab_remainder inventory.brush matches 1..1 run give @p " + cutBlock.getString("slab"));
+        combineSlabs.println("execute if score slab_count inventory.brush matches 1.. run return run function brush:inventory/give_items with storage inventory:brush give_items");
+        combineSlabs.println();
+      }
+    }
+    
+    if (!cutBlock.isNull("stairs"))
+    {
+      unStonecut.println("execute if block ~ ~ ~ " + cutBlock.getString("stairs") + " run playsound block.stone.place");
+      unStonecut.println("execute if block ~ ~ ~ " + cutBlock.getString("stairs") + " run return run setblock ~ ~ ~ " + cutBlock.getString("block"));
+    }
+    String functionData = "{slab:\"" + cutBlock.getString("slab_item") + "\", item:\"" + cutBlock.getString("item") + "\", block:\"" + cutBlock.getString("block") + "\"}";
+    if (!cutBlock.isNull("slab"))
+      unStonecut.println("execute if block ~ ~ ~ " + cutBlock.getString("slab") + " run return run function brush:inventory/remove_slab " + functionData);
+    if (!cutBlock.isNull("wall"))
+      unStonecut.println("execute if block ~ ~ ~ " + cutBlock.getString("wall") + " run return run function brush:inventory/remove_slab " + functionData);
+    if (!cutBlock.isNull("fence"))
+      unStonecut.println("execute if block ~ ~ ~ " + cutBlock.getString("fence") + " run return run function brush:inventory/remove_slab " + functionData);
+    unStonecut.println();
+  }
+  
+  placeSlabs.flush();
+  placeSlabs.close();
+  
+  combineSlabs.flush(); //<>//
+  combineSlabs.close();
+  
+  unStonecut.flush();
+  unStonecut.close();
 }

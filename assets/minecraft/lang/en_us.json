@@ -18,10 +18,11 @@
 	"bgui.slot.waxed": 				"\uE00b\uE005\uE013\uE005",
 	"bgui.slot.chiseled": 			"\uE00b\uE005\uE014\uE005",
 
-	"bgui.icon.stairs": 			"\uE00c\uE01a\uE00d",
-	"bgui.icon.slab": 				"\uE00c\uE01b\uE00d",
-	"bgui.icon.wall": 				"\uE00c\uE01c\uE00d\uE001",
-	"bgui.icon.fence": 				"\uE00c\uE01d\uE00d\uE001",
+	"bgui.icon.block": 				"\uE00c\uE01a\uE00d",
+	"bgui.icon.stairs": 			"\uE00c\uE01b\uE00d",
+	"bgui.icon.slab": 				"\uE00c\uE01c\uE00d",
+	"bgui.icon.wall": 				"\uE00c\uE01d\uE00d\uE001",
+	"bgui.icon.fence": 				"\uE00c\uE01e\uE00d\uE001",
 
 	
 	"bgui.using.brush": 			"\uE00e\uE020\uE00f",

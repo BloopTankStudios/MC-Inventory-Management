@@ -2,13 +2,13 @@
 advancement revoke @s only brush:use_brush
 
 # Reset GUI
-schedule function brush:gui/run 1t append
+schedule function brush:player/run 1t append
 
 # Check if just placed block
 execute if entity @s[tag=placed_block] run return fail
 
 # Run raycast
-execute at @s anchored eyes positioned ^ ^ ^.5 run function bs.raycast:run 
+execute at @s anchored eyes positioned ^ ^ ^.5 run function bs.raycast:run
 
 # Return if raycast is null
 execute unless data storage bs:out raycast.targeted_block run return fail
@@ -17,6 +17,7 @@ execute unless data storage bs:out raycast.targeted_block run return fail
 data modify entity B5-0-0-0-1 Pos set from storage bs:out raycast.targeted_block
 
 # Try to Replace Block
+execute if entity @s[predicate=brush:is_sneaking, predicate=brush:has_stonecutter] at B5-0-0-0-1 if block ~ ~ ~ #brush:stonecut_block run return run function brush:use_brush/shift_stonecut
 execute if entity @s[predicate=brush:has_stonecutter] at B5-0-0-0-1 if block ~ ~ ~ #brush:stonecutter_variant_block run return run function brush:use_brush/use_stonecutter
 execute if entity @s[predicate=brush:has_water] at B5-0-0-0-1 if block ~ ~ ~ #brush:water_variant_block run return run function brush:use_brush/use_water
 execute if entity @s[predicate=brush:has_fire] at B5-0-0-0-1 if block ~ ~ ~ #brush:fire_variant_block run return run function brush:use_brush/use_fire

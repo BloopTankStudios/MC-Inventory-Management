@@ -108,11 +108,13 @@
   {
     "convertsTo": {
       "water_to_fire": ["packed_mud"],
-      "water_to_waxed": ["mud_bricks"]
+      "water_to_waxed": ["mud_bricks"],
+      "stonecutter": {"blocks": ["mud_brick_stairs"]}
     },
     "gui": {
       "water_to_fire": ["packed_mud"],
-      "water_to_waxed": ["mud_bricks"]
+      "water_to_waxed": ["mud_bricks"],
+      "stonecutter": {"blocks": ["mud_brick_stairs"]}
     },
     "id": "mud_bricks",
     "breaks_into": "dirt"
@@ -124,6 +126,7 @@
         "stone",
         "smooth_stone"
       ],
+      "stonecutter": {"blocks": ["cobblestone_stairs"]},
       "attributes": [{
         "use": "moss_block",
         "block": "mossy_cobblestone"
@@ -147,6 +150,7 @@
         "stone",
         "smooth_stone"
       ],
+      "stonecutter": {"blocks": ["cobblestone_stairs"]},
       "attributes": [{
         "use": "moss_block",
         "block": "mossy_cobblestone"
@@ -174,7 +178,8 @@
         "stone",
         "smooth_stone"
       ],
-      "water_to_waxed": ["stone_bricks"]
+      "water_to_waxed": ["stone_bricks"],
+      "stonecutter": {"blocks": ["stone_stairs"]}
     },
     "gui": {
       "water_to_fire": [
@@ -182,7 +187,8 @@
         "stone",
         "smooth_stone"
       ],
-      "water_to_waxed": ["stone_bricks"]
+      "water_to_waxed": ["stone_bricks"],
+      "stonecutter": {"blocks": ["stone_stairs"]}
     },
     "id": "stone",
     "breaks_into": "cobblestone"
@@ -192,6 +198,7 @@
       "water_to_fire": ["cobblestone"],
       "water_to_waxed": ["stone_bricks"],
       "chiseled": ["chiseled_stone_bricks"],
+      "stonecutter": {"blocks": ["stone_brick_stairs"]},
       "attributes": [
         {
           "use": "flint_and_steel",
@@ -207,6 +214,7 @@
       "water_to_fire": ["cobblestone"],
       "water_to_waxed": ["stone_bricks"],
       "chiseled": ["chiseled_stone_bricks"],
+      "stonecutter": {"blocks": ["stone_brick_stairs"]},
       "attributes": [
         {
           "use": "flint_and_steel",
@@ -240,7 +248,11 @@
         "stone",
         "smooth_stone"
       ],
-      "chiseled": ["smooth_stone_double_slab"]
+      "chiseled": ["smooth_stone_double_slab"],
+      "stonecutter": {
+        "item": "cobblestone_slab",
+        "blocks": ["smooth_stone_slab"]
+      }
     },
     "gui": {
       "water_to_fire": [
@@ -248,7 +260,11 @@
         "stone",
         "smooth_stone"
       ],
-      "chiseled": ["smooth_stone_double_slab"]
+      "chiseled": ["smooth_stone_double_slab"],
+      "stonecutter": {
+        "item": "cobblestone_slab",
+        "blocks": ["smooth_stone_slab"]
+      }
     },
     "id": "smooth_stone",
     "breaks_into": "cobblestone"
@@ -268,6 +284,7 @@
     "convertsTo": {
       "water_to_fire": ["granite"],
       "water_to_waxed": ["polished_granite"],
+      "stonecutter": {"blocks": ["granite_stairs"]},
       "special_case": [{
         "use": "brush",
         "sound": "block.stone.place",
@@ -277,6 +294,7 @@
     "gui": {
       "water_to_fire": ["granite"],
       "water_to_waxed": ["polished_granite"],
+      "stonecutter": {"blocks": ["granite_stairs"]},
       "special_case": [{
         "use": "brush",
         "sound": "block.stone.place",
@@ -289,11 +307,13 @@
   {
     "convertsTo": {
       "water_to_fire": ["granite"],
-      "water_to_waxed": ["polished_granite"]
+      "water_to_waxed": ["polished_granite"],
+      "stonecutter": {"blocks": ["polished_granite_stairs"]}
     },
     "gui": {
       "water_to_fire": ["granite"],
-      "water_to_waxed": ["polished_granite"]
+      "water_to_waxed": ["polished_granite"],
+      "stonecutter": {"blocks": ["polished_granite_stairs"]}
     },
     "id": "polished_granite",
     "breaks_into": "cobblestone"
@@ -302,6 +322,7 @@
     "convertsTo": {
       "water_to_fire": ["diorite"],
       "water_to_waxed": ["polished_diorite"],
+      "stonecutter": {"blocks": ["diorite_stairs"]},
       "special_case": [
         {
           "use": "brush",
@@ -318,6 +339,7 @@
     "gui": {
       "water_to_fire": ["diorite"],
       "water_to_waxed": ["polished_diorite"],
+      "stonecutter": {"blocks": ["diorite_stairs"]},
       "special_case": [
         {
           "use": "brush",
@@ -337,11 +359,13 @@
   {
     "convertsTo": {
       "water_to_fire": ["diorite"],
-      "water_to_waxed": ["polished_diorite"]
+      "water_to_waxed": ["polished_diorite"],
+      "stonecutter": {"blocks": ["polished_diorite_stairs"]}
     },
     "gui": {
       "water_to_fire": ["diorite"],
-      "water_to_waxed": ["polished_diorite"]
+      "water_to_waxed": ["polished_diorite"],
+      "stonecutter": {"blocks": ["polished_diorite_stairs"]}
     },
     "id": "polished_diorite",
     "breaks_into": "cobblestone"
@@ -350,6 +374,7 @@
     "convertsTo": {
       "water_to_fire": ["andesite"],
       "water_to_waxed": ["polished_andesite"],
+      "stonecutter": {"blocks": ["andesite_stairs"]},
       "special_case": [
         {
           "use": "brush",
@@ -366,6 +391,7 @@
     "gui": {
       "water_to_fire": ["andesite"],
       "water_to_waxed": ["polished_andesite"],
+      "stonecutter": {"blocks": ["andesite_stairs"]},
       "special_case": [
         {
           "use": "brush",
@@ -385,11 +411,13 @@
   {
     "convertsTo": {
       "water_to_fire": ["andesite"],
-      "water_to_waxed": ["polished_andesite"]
+      "water_to_waxed": ["polished_andesite"],
+      "stonecutter": {"blocks": ["polished_andesite_stairs"]}
     },
     "gui": {
       "water_to_fire": ["andesite"],
-      "water_to_waxed": ["polished_andesite"]
+      "water_to_waxed": ["polished_andesite"],
+      "stonecutter": {"blocks": ["polished_andesite_stairs"]}
     },
     "id": "polished_andesite",
     "breaks_into": "cobblestone"
@@ -400,14 +428,16 @@
         "cobbled_deepslate",
         "deepslate"
       ],
-      "water_to_waxed": ["polished_deepslate"]
+      "water_to_waxed": ["polished_deepslate"],
+      "stonecutter": {"blocks": ["cobbled_deepslate_stairs"]}
     },
     "gui": {
       "water_to_fire": [
         "cobbled_deepslate",
         "deepslate"
       ],
-      "water_to_waxed": ["polished_deepslate"]
+      "water_to_waxed": ["polished_deepslate"],
+      "stonecutter": {"blocks": ["cobbled_deepslate_stairs"]}
     },
     "id": "cobbled_deepslate",
     "breaks_into": "cobbled_deepslate"
@@ -438,7 +468,8 @@
         "deepslate_bricks",
         "deepslate_tiles"
       ],
-      "chiseled": ["chiseled_deepslate"]
+      "chiseled": ["chiseled_deepslate"],
+      "stonecutter": {"blocks": ["polished_deepslate_stairs"]}
     },
     "gui": {
       "water_to_fire": ["cobbled_deepslate"],
@@ -447,7 +478,8 @@
         "deepslate_bricks",
         "deepslate_tiles"
       ],
-      "chiseled": ["chiseled_deepslate"]
+      "chiseled": ["chiseled_deepslate"],
+      "stonecutter": {"blocks": ["polished_deepslate_stairs"]}
     },
     "id": "polished_deepslate",
     "breaks_into": "cobbled_deepslate"
@@ -461,6 +493,7 @@
         "deepslate_tiles"
       ],
       "chiseled": ["chiseled_deepslate"],
+      "stonecutter": {"blocks": ["deepslate_brick_stairs"]},
       "attributes": [{
         "use": "flint_and_steel",
         "block": "cracked_deepslate_bricks"
@@ -474,6 +507,7 @@
         "deepslate_tiles"
       ],
       "chiseled": ["chiseled_deepslate"],
+      "stonecutter": {"blocks": ["deepslate_brick_stairs"]},
       "attributes": [{
         "use": "flint_and_steel",
         "block": "cracked_deepslate_bricks"
@@ -491,6 +525,7 @@
         "deepslate_tiles"
       ],
       "chiseled": ["chiseled_deepslate"],
+      "stonecutter": {"blocks": ["deepslate_tile_stairs"]},
       "attributes": [{
         "use": "flint_and_steel",
         "block": "cracked_deepslate_tiles"
@@ -504,6 +539,7 @@
         "deepslate_tiles"
       ],
       "chiseled": ["chiseled_deepslate"],
+      "stonecutter": {"blocks": ["deepslate_tile_stairs"]},
       "attributes": [{
         "use": "flint_and_steel",
         "block": "cracked_deepslate_tiles"
@@ -527,11 +563,13 @@
   {
     "convertsTo": {
       "water_to_fire": ["tuff"],
-      "water_to_waxed": ["polished_tuff"]
+      "water_to_waxed": ["polished_tuff"],
+      "stonecutter": {"blocks": ["tuff_stairs"]}
     },
     "gui": {
       "water_to_fire": ["tuff"],
-      "water_to_waxed": ["polished_tuff"]
+      "water_to_waxed": ["polished_tuff"],
+      "stonecutter": {"blocks": ["tuff_stairs"]}
     },
     "id": "tuff",
     "breaks_into": "tuff"
@@ -543,7 +581,8 @@
         "polished_tuff",
         "tuff_bricks"
       ],
-      "chiseled": ["chiseled_tuff_bricks"]
+      "chiseled": ["chiseled_tuff_bricks"],
+      "stonecutter": {"blocks": ["polished_tuff_stairs"]}
     },
     "gui": {
       "water_to_fire": ["tuff"],
@@ -551,7 +590,8 @@
         "polished_tuff",
         "tuff_bricks"
       ],
-      "chiseled": ["chiseled_tuff_bricks"]
+      "chiseled": ["chiseled_tuff_bricks"],
+      "stonecutter": {"blocks": ["polished_tuff_stairs"]}
     },
     "id": "polished_tuff",
     "breaks_into": "tuff"
@@ -563,7 +603,8 @@
         "polished_tuff",
         "tuff_bricks"
       ],
-      "chiseled": ["chiseled_tuff_bricks"]
+      "chiseled": ["chiseled_tuff_bricks"],
+      "stonecutter": {"blocks": ["tuff_brick_stairs"]}
     },
     "gui": {
       "water_to_fire": ["tuff"],
@@ -571,7 +612,8 @@
         "polished_tuff",
         "tuff_bricks"
       ],
-      "chiseled": ["chiseled_tuff_bricks"]
+      "chiseled": ["chiseled_tuff_bricks"],
+      "stonecutter": {"blocks": ["tuff_brick_stairs"]}
     },
     "id": "tuff_bricks",
     "breaks_into": "tuff"
@@ -619,6 +661,7 @@
         "smooth_sandstone"
       ],
       "water_to_waxed": ["cut_sandstone"],
+      "stonecutter": {"blocks": ["sandstone_stairs"]},
       "special_case": [{
         "use": "brush",
         "sound": "",
@@ -631,6 +674,7 @@
         "smooth_sandstone"
       ],
       "water_to_waxed": ["cut_sandstone"],
+      "stonecutter": {"blocks": ["sandstone_stairs"]},
       "special_case": [{
         "use": "brush",
         "sound": "",
@@ -646,14 +690,16 @@
         "sandstone",
         "smooth_sandstone"
       ],
-      "water_to_waxed": ["cut_sandstone"]
+      "water_to_waxed": ["cut_sandstone"],
+      "stonecutter": {"blocks": ["smooth_sandstone_stairs"]}
     },
     "gui": {
       "water_to_fire": [
         "sandstone",
         "smooth_sandstone"
       ],
-      "water_to_waxed": ["cut_sandstone"]
+      "water_to_waxed": ["cut_sandstone"],
+      "stonecutter": {"blocks": ["smooth_sandstone_stairs"]}
     },
     "id": "smooth_sandstone",
     "breaks_into": "sandstone"
@@ -662,12 +708,20 @@
     "convertsTo": {
       "water_to_fire": ["sandstone"],
       "water_to_waxed": ["cut_sandstone"],
-      "chiseled": ["chiseled_sandstone"]
+      "chiseled": ["chiseled_sandstone"],
+      "stonecutter": {
+        "item": "sandstone_slab",
+        "blocks": ["cut_sandstone_slab"]
+      }
     },
     "gui": {
       "water_to_fire": ["sandstone"],
       "water_to_waxed": ["cut_sandstone"],
-      "chiseled": ["chiseled_sandstone"]
+      "chiseled": ["chiseled_sandstone"],
+      "stonecutter": {
+        "item": "sandstone_slab",
+        "blocks": ["cut_sandstone_slab"]
+      }
     },
     "id": "cut_sandstone",
     "breaks_into": "sandstone"
@@ -691,6 +745,7 @@
         "smooth_red_sandstone"
       ],
       "water_to_waxed": ["cut_red_sandstone"],
+      "stonecutter": {"blocks": ["red_sandstone_stairs"]},
       "special_case": [{
         "use": "brush",
         "sound": "",
@@ -703,6 +758,7 @@
         "smooth_red_sandstone"
       ],
       "water_to_waxed": ["cut_red_sandstone"],
+      "stonecutter": {"blocks": ["red_sandstone_stairs"]},
       "special_case": [{
         "use": "brush",
         "sound": "",
@@ -718,14 +774,16 @@
         "red_sandstone",
         "smooth_red_sandstone"
       ],
-      "water_to_waxed": ["cut_red_sandstone"]
+      "water_to_waxed": ["cut_red_sandstone"],
+      "stonecutter": {"blocks": ["smooth_red_sandstone_stairs"]}
     },
     "gui": {
       "water_to_fire": [
         "red_sandstone",
         "smooth_red_sandstone"
       ],
-      "water_to_waxed": ["cut_red_sandstone"]
+      "water_to_waxed": ["cut_red_sandstone"],
+      "stonecutter": {"blocks": ["smooth_red_sandstone_stairs"]}
     },
     "id": "smooth_red_sandstone",
     "breaks_into": "red_sandstone"
@@ -734,12 +792,20 @@
     "convertsTo": {
       "water_to_fire": ["red_sandstone"],
       "water_to_waxed": ["cut_red_sandstone"],
-      "chiseled": ["chiseled_red_sandstone"]
+      "chiseled": ["chiseled_red_sandstone"],
+      "stonecutter": {
+        "item": "red_sandstone_slab",
+        "blocks": ["cut_red_sandstone_slab"]
+      }
     },
     "gui": {
       "water_to_fire": ["red_sandstone"],
       "water_to_waxed": ["cut_red_sandstone"],
-      "chiseled": ["chiseled_red_sandstone"]
+      "chiseled": ["chiseled_red_sandstone"],
+      "stonecutter": {
+        "item": "red_sandstone_slab",
+        "blocks": ["cut_red_sandstone_slab"]
+      }
     },
     "id": "cut_red_sandstone",
     "breaks_into": "red_sandstone"
@@ -760,6 +826,7 @@
     "convertsTo": {
       "water_to_fire": ["prismarine"],
       "water_to_waxed": ["prismarine_bricks"],
+      "stonecutter": {"blocks": ["prismarine_stairs"]},
       "special_case": [{
         "use": "black_dye",
         "sound": "",
@@ -769,6 +836,7 @@
     "gui": {
       "water_to_fire": ["prismarine"],
       "water_to_waxed": ["prismarine_bricks"],
+      "stonecutter": {"blocks": ["prismarine_stairs"]},
       "special_case": [{
         "use": "black_dye",
         "sound": "",
@@ -781,11 +849,13 @@
   {
     "convertsTo": {
       "water_to_fire": ["prismarine"],
-      "water_to_waxed": ["prismarine_bricks"]
+      "water_to_waxed": ["prismarine_bricks"],
+      "stonecutter": {"blocks": ["prismarine_brick_stairs"]}
     },
     "gui": {
       "water_to_fire": ["prismarine"],
-      "water_to_waxed": ["prismarine_bricks"]
+      "water_to_waxed": ["prismarine_bricks"],
+      "stonecutter": {"blocks": ["prismarine_brick_stairs"]}
     },
     "id": "prismarine_bricks",
     "breaks_into": "prismarine"
@@ -794,6 +864,7 @@
     "convertsTo": {
       "water_to_waxed": ["nether_bricks"],
       "chiseled": ["chiseled_nether_bricks"],
+      "stonecutter": {"blocks": ["nether_brick_stairs"]},
       "attributes": [{
         "use": "flint_and_steel",
         "block": "cracked_nether_bricks"
@@ -807,6 +878,7 @@
     "gui": {
       "water_to_waxed": ["nether_bricks"],
       "chiseled": ["chiseled_nether_bricks"],
+      "stonecutter": {"blocks": ["nether_brick_stairs"]},
       "attributes": [{
         "use": "flint_and_steel",
         "block": "cracked_nether_bricks"
@@ -883,11 +955,13 @@
   {
     "convertsTo": {
       "water_to_fire": ["blackstone"],
-      "water_to_waxed": ["polished_blackstone"]
+      "water_to_waxed": ["polished_blackstone"],
+      "stonecutter": {"blocks": ["blackstone_stairs"]}
     },
     "gui": {
       "water_to_fire": ["blackstone"],
-      "water_to_waxed": ["polished_blackstone"]
+      "water_to_waxed": ["polished_blackstone"],
+      "stonecutter": {"blocks": ["blackstone_stairs"]}
     },
     "id": "blackstone",
     "breaks_into": "blackstone"
@@ -899,7 +973,8 @@
         "polished_blackstone",
         "polished_blackstone_bricks"
       ],
-      "chiseled": ["chiseled_polished_blackstone"]
+      "chiseled": ["chiseled_polished_blackstone"],
+      "stonecutter": {"blocks": ["polished_blackstone_stairs"]}
     },
     "gui": {
       "water_to_fire": ["blackstone"],
@@ -907,7 +982,8 @@
         "polished_blackstone",
         "polished_blackstone_bricks"
       ],
-      "chiseled": ["chiseled_polished_blackstone"]
+      "chiseled": ["chiseled_polished_blackstone"],
+      "stonecutter": {"blocks": ["polished_blackstone_stairs"]}
     },
     "id": "polished_blackstone",
     "breaks_into": "blackstone"
@@ -920,6 +996,7 @@
         "polished_blackstone_bricks"
       ],
       "chiseled": ["chiseled_polished_blackstone"],
+      "stonecutter": {"blocks": ["polished_blackstone_brick_stairs"]},
       "attributes": [{
         "use": "flint_and_steel",
         "block": "cracked_polished_blackstone_bricks"
@@ -932,6 +1009,7 @@
         "polished_blackstone_bricks"
       ],
       "chiseled": ["chiseled_polished_blackstone"],
+      "stonecutter": {"blocks": ["polished_blackstone_brick_stairs"]},
       "attributes": [{
         "use": "flint_and_steel",
         "block": "cracked_polished_blackstone_bricks"
@@ -968,6 +1046,7 @@
     "convertsTo": {
       "water_to_fire": ["end_stone"],
       "water_to_waxed": ["end_stone_bricks"],
+      "stonecutter": {"blocks": ["end_stone_brick_stairs"]},
       "special_case": [{
         "use": "chorus_fruit",
         "sound": "item.crop.plant",
@@ -977,6 +1056,7 @@
     "gui": {
       "water_to_fire": ["end_stone"],
       "water_to_waxed": ["end_stone_bricks"],
+      "stonecutter": {"blocks": ["end_stone_brick_stairs"]},
       "special_case": [{
         "use": "chorus_fruit",
         "sound": "item.crop.plant",
@@ -990,6 +1070,7 @@
     "convertsTo": {
       "water_to_waxed": ["purpur_block"],
       "chiseled": ["purpur_pillar"],
+      "stonecutter": {"blocks": ["purpur_stairs"]},
       "special_case": [{
         "use": "brush",
         "sound": "item.crop.plant",
@@ -999,6 +1080,7 @@
     "gui": {
       "water_to_waxed": ["purpur_block"],
       "chiseled": ["purpur_pillar"],
+      "stonecutter": {"blocks": ["purpur_stairs"]},
       "special_case": [{
         "use": "brush",
         "sound": "item.crop.plant",
@@ -1026,14 +1108,16 @@
         "quartz_block",
         "smooth_quartz"
       ],
-      "water_to_waxed": ["quartz_bricks"]
+      "water_to_waxed": ["quartz_bricks"],
+      "stonecutter": {"blocks": ["quartz_stairs"]}
     },
     "gui": {
       "water_to_fire": [
         "quartz_block",
         "smooth_quartz"
       ],
-      "water_to_waxed": ["quartz_bricks"]
+      "water_to_waxed": ["quartz_bricks"],
+      "stonecutter": {"blocks": ["quartz_stairs"]}
     },
     "id": "quartz_block",
     "breaks_into": "quartz_block"
@@ -1044,14 +1128,16 @@
         "quartz_block",
         "smooth_quartz"
       ],
-      "water_to_waxed": ["quartz_bricks"]
+      "water_to_waxed": ["quartz_bricks"],
+      "stonecutter": {"blocks": ["smooth_quartz_stairs"]}
     },
     "gui": {
       "water_to_fire": [
         "quartz_block",
         "smooth_quartz"
       ],
-      "water_to_waxed": ["quartz_bricks"]
+      "water_to_waxed": ["quartz_bricks"],
+      "stonecutter": {"blocks": ["smooth_quartz_stairs"]}
     },
     "id": "smooth_quartz",
     "breaks_into": "quartz_block"
@@ -1123,7 +1209,8 @@
         "copper",
         "cut_copper"
       ],
-      "chiseled": ["chiseled_copper"]
+      "chiseled": ["chiseled_copper"],
+      "stonecutter": {"blocks": ["waxed_oxidized_cut_copper_stairs"]}
     },
     "id": "cut_copper",
     "breaks_into": "copper"
@@ -1176,6 +1263,7 @@
   {
     "convertsTo": {
       "self": "bamboo_planks",
+      "stonecutter": {"blocks": ["bamboo_stairs"]},
       "special_case": [{
         "use": "bamboo",
         "sound": "block.bamboo_wood.place",
@@ -1184,6 +1272,7 @@
     },
     "gui": {
       "self": "bamboo_planks",
+      "stonecutter": {"blocks": ["bamboo_stairs"]},
       "special_case": [{
         "use": "bamboo",
         "sound": "block.bamboo_wood.place",
@@ -1196,6 +1285,7 @@
   {
     "convertsTo": {
       "self": "bamboo_mosaic",
+      "stonecutter": {"blocks": ["bamboo_mosaic_stairs"]},
       "special_case": [{
         "use": "brush",
         "sound": "block.bamboo_wood.place",
@@ -1204,6 +1294,7 @@
     },
     "gui": {
       "self": "bamboo_mosaic",
+      "stonecutter": {"blocks": ["bamboo_mosaic_stairs"]},
       "special_case": [{
         "use": "brush",
         "sound": "block.bamboo_wood.place",
@@ -1287,7 +1378,8 @@
         "converts_to": "dirt"
       }]
     },
-    "id": "rooted_dirt"
+    "id": "rooted_dirt",
+    "breaks_into": "dirt"
   },
   {
     "convertsTo": {
@@ -1307,7 +1399,7 @@
       }]
     },
     "id": "muddy_mangrove_roots",
-    "breaks_into": "mud"
+    "breaks_into": "dirt"
   },
   {
     "convertsTo": {
@@ -1397,6 +1489,7 @@
   {
     "convertsTo": {
       "self": "dark_prismarine",
+      "stonecutter": {"blocks": ["dark_prismarine_stairs"]},
       "special_case": [{
         "use": "brush",
         "sound": "",
@@ -1405,17 +1498,20 @@
     },
     "gui": {
       "self": "dark_prismarine",
+      "stonecutter": {"blocks": ["dark_prismarine_stairs"]},
       "special_case": [{
         "use": "brush",
         "sound": "",
         "converts_to": "prismarine"
       }]
     },
-    "id": "dark_prismarine"
+    "id": "dark_prismarine",
+    "breaks_into": "dark_prismarine"
   },
   {
     "convertsTo": {
       "self": "red_nether_bricks",
+      "stonecutter": {"blocks": ["red_nether_brick_stairs"]},
       "special_case": [{
         "use": "brush",
         "sound": "block.nether_bricks.place",
@@ -1424,13 +1520,15 @@
     },
     "gui": {
       "self": "red_nether_bricks",
+      "stonecutter": {"blocks": ["red_nether_brick_stairs"]},
       "special_case": [{
         "use": "brush",
         "sound": "block.nether_bricks.place",
         "converts_to": "nether_bricks"
       }]
     },
-    "id": "red_nether_bricks"
+    "id": "red_nether_bricks",
+    "breaks_into": "red_nether_bricks"
   },
   {
     "convertsTo": {
@@ -1510,6 +1608,14 @@
     "id": "wet_sponge"
   },
   {
+    "convertsTo": {
+      "self": "bricks",
+      "stonecutter": {"blocks": ["brick_stairs"]}
+    },
+    "gui": {
+      "self": "bricks",
+      "stonecutter": {"blocks": ["brick_stairs"]}
+    },
     "id": "bricks",
     "breaks_into": "bricks"
   },

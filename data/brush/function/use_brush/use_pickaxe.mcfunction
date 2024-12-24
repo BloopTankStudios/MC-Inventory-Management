@@ -4,6 +4,8 @@ playsound minecraft:ui.stonecutter.take_result block @a ~.5 ~.5 ~.5 .5
 
 execute if block ~ ~ ~ stone_bricks run particle minecraft:block{block_state:"stone_bricks"} ~.5 ~.5 ~.5 .35 .35 .35 1 40
 execute if block ~ ~ ~ stone_bricks run return run setblock ~ ~ ~ chiseled_stone_bricks
+execute if block ~ ~ ~ smooth_stone run particle minecraft:block{block_state:"smooth_stone"} ~.5 ~.5 ~.5 .35 .35 .35 1 40
+execute if block ~ ~ ~ smooth_stone run return run setblock ~ ~ ~ smooth_stone_slab[type=double]
 execute if block ~ ~ ~ polished_deepslate run particle minecraft:block{block_state:"polished_deepslate"} ~.5 ~.5 ~.5 .35 .35 .35 1 40
 execute if block ~ ~ ~ polished_deepslate run return run setblock ~ ~ ~ chiseled_deepslate
 execute if block ~ ~ ~ deepslate_bricks run particle minecraft:block{block_state:"deepslate_bricks"} ~.5 ~.5 ~.5 .35 .35 .35 1 40

@@ -31,7 +31,7 @@
               },
               {
                 "type": "minecraft:item",
-                "name": "minecraft:mud",
+                "name": "minecraft:dirt",
                 "conditions": [
                   {
                     "condition": "minecraft:survives_explosion"

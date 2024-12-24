@@ -59,9 +59,9 @@
 		{
 			"type": "bitmap",
 			"file": "minecraft:gui/icon_cut.png",
-			"ascent": -49,
-			"height": 10,
-			"chars": ["\uE01a\uE01b\uE01c\uE01d"]
+			"ascent": -43,
+			"height": 15,
+			"chars": ["\uE01a\uE01b\uE01c\uE01d\uE01e"]
 		},
 		{
 			"type": "bitmap",

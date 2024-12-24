@@ -9,12 +9,6 @@
           "custom_model_data": 1
         },
         "model": "minecraft:item/water_bottle"
-      },
-      {
-        "predicate": {
-            "custom_model_data": 2
-        },
-        "model": "minecraft:item/chorus_fruit"
       }
     ]
   }

@@ -1,0 +1,30 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:can_break": {
+        "predicates": [
+          {}
+        ],
+        "show_in_tooltip": false
+      }
+    },
+    "conditions": []
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:consumable_variants"
+    },
+    "modifier": {
+      "function": "minecraft:set_components",
+      "components": {
+        "!minecraft:food": {},
+        "minecraft:custom_data": {
+          "removed_consume": true
+        }
+      }
+    },
+    "conditions": []
+  }
+]

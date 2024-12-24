@@ -7,6 +7,7 @@
         "#brush:pickaxe_variant_block",
         "#brush:dyable_variant_block",
         "#brush:stonecutter_variant_block",
+        "#brush:stonecut_block",
         "#brush:custom_variant_block"
     ]
 }

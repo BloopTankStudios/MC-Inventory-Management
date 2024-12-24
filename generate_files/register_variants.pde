@@ -1,9 +1,7 @@
 void registerDefaultVariants()
 {
   JSONArray variants = loadJSONArray("variants/default_variants.json");
-  
-  println(variants);
-  
+    
   //Add all blocks to blockRegistery
   for (int i = 0; i < variants.size(); i++) {
     JSONObject variantInfo = variants.getJSONObject(i); 
@@ -92,9 +90,7 @@ void registerDefaultVariants()
 void registerCustomVariants()
 {
   JSONArray variants = loadJSONArray("variants/custom_variants.json");
-  
-  println(variants);
-  
+    
   //Add all blocks to blockRegistery
   for (int i = 0; i < variants.size(); i++)
   {
@@ -169,8 +165,6 @@ void registerStoneCutterVariants()
 {
   JSONArray variants = loadJSONArray("variants/stonecutter.json");
   
-  println(variants);
-  
   //Add all blocks to blockRegistery
   for (int i = 0; i < variants.size(); i++)
   {
@@ -195,10 +189,8 @@ void registerStoneCutterVariants()
 
 void registerLootTableVariants()
 {
-    JSONArray variants = loadJSONArray("variants/loot_table.json");
-  
-  println(variants);
-  
+  JSONArray variants = loadJSONArray("variants/loot_table.json");
+    
   //Add all blocks to blockRegistery
   for (int i = 0; i < variants.size(); i++)
   {
