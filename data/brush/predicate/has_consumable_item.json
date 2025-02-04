@@ -10,7 +10,7 @@
           "predicate": {
             "slots": {
               "container.*": {
-                "items": "#brush:consumable_variants",
+                "items": "#brush:consumable_variant",
                 "components": {
                   "minecraft:custom_data": {
                     "removed_consume": true
@@ -26,7 +26,7 @@
           "predicate": {
             "slots": {
               "weapon.offhand": {
-                "items": "#brush:consumable_variants",
+                "items": "#brush:consumable_variant",
                 "components": {
                   "minecraft:custom_data": {
                     "removed_consume": true
@@ -42,7 +42,7 @@
           "predicate": {
             "slots": {
               "player.cursor": {
-                "items": "#brush:consumable_variants",
+                "items": "#brush:consumable_variant",
                 "components": {
                   "minecraft:custom_data": {
                     "removed_consume": true
@@ -79,7 +79,7 @@
             "predicate": {
               "slots": {
                 "weapon.*": {
-                  "items": "#brush:consumable_variants",
+                  "items": "#brush:consumable_variant",
                   "components": {
                     "minecraft:custom_data": {
                       "removed_consume": true

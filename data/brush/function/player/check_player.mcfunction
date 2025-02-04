@@ -15,6 +15,14 @@ execute if items entity @s weapon.offhand brush run item modify entity @s weapon
 execute if entity @s[gamemode=adventure] run item modify entity @s weapon.mainhand brush:disable_item
 execute if entity @s[gamemode=adventure] run item modify entity @s weapon.offhand brush:disable_item
 
+
+# If has base variant item in hand, replace with stored variant
+execute if items entity @s weapon.mainhand #brush:variant_item[!custom_data] run \
+    return run function brush:storage/get_variant_block
+
+# Doesn't need raycast with variant in hand, if not crouching
+execute if items entity @s weapon.mainhand #brush:variant_item unless entity @s[predicate=brush:is_sneaking] run return run title @s actionbar ""
+
 # Raycast
 execute at @s anchored eyes positioned ^ ^ ^.5 run function bs.raycast:run
 
@@ -28,6 +36,7 @@ data modify entity B5-0-0-0-1 Pos set from storage bs:out raycast.targeted_block
 execute at B5-0-0-0-1 unless block ~ ~ ~ #brush:variant_block run return run title @s actionbar ""
 
 # Run Display
+execute at B5-0-0-0-1 if items entity @s weapon.mainhand #brush:variant_item run return run function brush:player/check_block
 execute at B5-0-0-0-1 if entity @s[predicate=brush:is_sneaking, predicate=brush:has_stonecutter] if block ~ ~ ~ #brush:stonecut_block run return run function brush:gui/stonecutter_gui
 execute at B5-0-0-0-1 run function brush:gui/brush_gui
 

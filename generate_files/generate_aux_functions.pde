@@ -3,6 +3,7 @@
 void generateAuxFiles()
 {
   resetConsumables();
+  resetVariantBlocks();
 }
 
 void resetConsumables()
@@ -30,6 +31,26 @@ void resetConsumables()
     "{\"food\":{\"nutrition\": 4, \"saturation\": 2.4, \"can_always_eat\": true},\"custom_data\":{\"removed_consume\":false}}}";
     
   //functionFile.println("data merge storage inventory:brush {replace_item:{id:\"minecraft:chorus_fruit\"}}");
+  functionFile.println(stringReplace(function, "PLAYER_SLOT", "player.cursor"));
+  functionFile.println(stringReplace(function, "PLAYER_SLOT", "weapon.offhand"));
+    
+  for (int i = 0; i < 36; i++)
+    functionFile.println(stringReplace(function, "PLAYER_SLOT", "container." + i));
+    
+  functionFile.flush();
+  functionFile.close();
+}
+
+void resetVariantBlocks()
+{
+  PrintWriter functionFile = createWriter("../data/brush/function/inventory/reset_variant_blocks.mcfunction");
+  functionFile.println("# Auto Generated");
+  functionFile.println();
+  functionFile.println("advancement revoke @s only brush:has_variant_block");
+  functionFile.println();
+  
+  String function = "execute if items entity @s PLAYER_SLOT #brush:variant_item[custom_data] run return run item modify entity @s PLAYER_SLOT brush:from_variant_item";
+  
   functionFile.println(stringReplace(function, "PLAYER_SLOT", "player.cursor"));
   functionFile.println(stringReplace(function, "PLAYER_SLOT", "weapon.offhand"));
     
