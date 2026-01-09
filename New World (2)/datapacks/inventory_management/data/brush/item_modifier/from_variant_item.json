@@ -1,0 +1,20 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "!minecraft:custom_data": {},
+      "minecraft:lore": [],
+      "!minecraft:can_break": {}
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:cobblestone_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:cobblestone"
+    }
+  }
+]

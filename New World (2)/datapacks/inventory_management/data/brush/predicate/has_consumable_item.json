@@ -1,0 +1,96 @@
+{
+  "condition": "minecraft:all_of",
+  "terms": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "slots": {
+              "container.*": {
+                "items": "#brush:consumable_variant",
+                "components": {
+                  "minecraft:custom_data": {
+                    "removed_consume": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "slots": {
+              "weapon.offhand": {
+                "items": "#brush:consumable_variant",
+                "components": {
+                  "minecraft:custom_data": {
+                    "removed_consume": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "slots": {
+              "player.cursor": {
+                "items": "#brush:consumable_variant",
+                "components": {
+                  "minecraft:custom_data": {
+                    "removed_consume": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "slots": {
+                "weapon.*": {
+                  "items": "minecraft:brush"
+                }
+              }
+            }
+          }
+        },
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "slots": {
+                "weapon.*": {
+                  "items": "#brush:consumable_variant",
+                  "components": {
+                    "minecraft:custom_data": {
+                      "removed_consume": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

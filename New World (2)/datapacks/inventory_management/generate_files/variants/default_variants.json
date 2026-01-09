@@ -1,0 +1,135 @@
+[
+    {
+        "breaks_into": "dirt",
+        "water_to_fire": ["mud", "dirt", "coarse_dirt"],
+        "water_to_waxed": [],
+        "pillar": [],
+        "chiseled": []
+    },
+    {
+        "breaks_into": "dirt",
+        "water_to_fire": ["packed_mud"],
+        "water_to_waxed": ["mud_bricks"],
+        "pillar": [],
+        "chiseled": []
+    },
+    {
+        "breaks_into": "cobblestone",
+        "water_to_fire": ["cobblestone", "stone"],
+        "water_to_waxed": ["stone_bricks"],
+        "pillar": [],
+        "chiseled": ["chiseled_stone_bricks"]
+    },
+    {
+        "breaks_into": "cobblestone",
+        "water_to_fire": [],
+        "water_to_waxed": ["smooth_stone"],
+        "pillar": [],
+        "chiseled": ["smooth_stone_double_slab"]
+    },
+    {
+        "breaks_into": "cobblestone",
+        "water_to_fire": ["granite"],
+        "water_to_waxed": ["polished_granite"],
+        "pillar": [],
+        "chiseled": []
+    },
+    {
+        "breaks_into": "cobblestone",
+        "water_to_fire": ["diorite"],
+        "water_to_waxed": ["polished_diorite"],
+        "pillar": [],
+        "chiseled": []
+    },
+    {
+        "breaks_into": "cobblestone",
+        "water_to_fire": ["andesite"],
+        "water_to_waxed": ["polished_andesite"],
+        "pillar": [],
+        "chiseled": []
+    },
+    {
+        "breaks_into": "cobbled_deepslate",
+        "water_to_fire": ["cobbled_deepslate", "deepslate"],
+        "water_to_waxed": ["polished_deepslate", "deepslate_bricks", "deepslate_tiles"],
+        "pillar": [],
+        "chiseled": ["chiseled_deepslate"]
+    },
+    {
+        "breaks_into": "tuff",
+        "water_to_fire": ["tuff"],
+        "water_to_waxed": ["polished_tuff", "tuff_bricks"],
+        "pillar": [],
+        "chiseled": ["chiseled_tuff_bricks", "chiseled_tuff"]
+    },
+    {
+        "breaks_into": "sandstone",
+        "water_to_fire": ["sandstone", "smooth_sandstone"],
+        "water_to_waxed": ["cut_sandstone"],
+        "pillar": [],
+        "chiseled": ["chiseled_sandstone"]
+    },
+    {
+        "breaks_into": "red_sandstone",
+        "water_to_fire": ["red_sandstone", "smooth_red_sandstone"],
+        "water_to_waxed": ["cut_red_sandstone"],
+        "pillar": [],
+        "chiseled": ["chiseled_red_sandstone"]
+    },
+    {
+        "breaks_into": "prismarine",
+        "water_to_fire": ["prismarine"],
+        "water_to_waxed": ["prismarine_bricks"],
+        "pillar": [],
+        "chiseled": []
+    },
+    {
+        "breaks_into": "nether_bricks",
+        "water_to_fire": [],
+        "water_to_waxed": ["nether_bricks"],
+        "pillar": [],
+        "chiseled": ["chiseled_nether_bricks"]
+    },
+    {
+        "breaks_into": "basalt",
+        "water_to_fire": ["basalt", "smooth_basalt"],
+        "water_to_waxed": ["polished_basalt"],
+        "pillar": [],
+        "chiseled": []
+    },
+    {
+        "breaks_into": "blackstone",
+        "water_to_fire": ["blackstone"],
+        "water_to_waxed": ["polished_blackstone", "polished_blackstone_bricks"],
+        "pillar": [],
+        "chiseled": ["chiseled_polished_blackstone"]
+    },
+    {
+        "breaks_into": "end_stone",
+        "water_to_fire": ["end_stone"],
+        "water_to_waxed": ["end_stone_bricks"],
+        "pillar": [],
+        "chiseled": []
+    },
+    {
+        "breaks_into": "purpur_block",
+        "water_to_fire": [],
+        "water_to_waxed": ["purpur_block"],
+        "pillar": ["purpur_pillar"],
+        "chiseled": []
+    },
+    {
+        "breaks_into": "quartz_block",
+        "water_to_fire": ["quartz_block", "smooth_quartz"],
+        "water_to_waxed": ["quartz_bricks"],
+        "pillar": ["quartz_pillar"],
+        "chiseled": ["chiseled_quartz_block"]
+    },
+    {
+        "breaks_into": "copper",
+        "water_to_fire": [],
+        "water_to_waxed": ["copper", "cut_copper"],
+        "pillar": [],
+        "chiseled": ["chiseled_copper", "copper_grate"]
+    }
+]

@@ -1,0 +1,508 @@
+[
+  {
+    "item": "dirt",
+    "stairs": "mud_brick_stairs",
+    "slab_item": "mud_brick_slab",
+    "block": "mud_bricks",
+    "wall": "mud_brick_wall",
+    "isBaseSlab": true,
+    "slab": "mud_brick_slab"
+  },
+  {
+    "item": "cobblestone",
+    "stairs": "cobblestone_stairs",
+    "slab_item": "cobblestone_slab",
+    "block": "cobblestone",
+    "wall": "cobblestone_wall",
+    "isBaseSlab": true,
+    "slab": "cobblestone_slab"
+  },
+  {
+    "item": "cobblestone",
+    "stairs": "mossy_cobblestone_stairs",
+    "slab_item": "cobblestone_slab",
+    "block": "mossy_cobblestone",
+    "wall": "mossy_cobblestone_wall",
+    "isBaseSlab": false,
+    "slab": "mossy_cobblestone_slab"
+  },
+  {
+    "item": "cobblestone",
+    "stairs": "stone_stairs",
+    "slab_item": "cobblestone_slab",
+    "block": "stone",
+    "isBaseSlab": false,
+    "slab": "stone_slab"
+  },
+  {
+    "item": "cobblestone",
+    "stairs": "stone_brick_stairs",
+    "slab_item": "cobblestone_slab",
+    "block": "stone_bricks",
+    "wall": "stone_brick_wall",
+    "isBaseSlab": false,
+    "slab": "stone_brick_slab"
+  },
+  {
+    "item": "cobblestone",
+    "stairs": "mossy_stone_brick_stairs",
+    "slab_item": "cobblestone_slab",
+    "block": "mossy_stone_bricks",
+    "wall": "mossy_stone_brick_wall",
+    "isBaseSlab": false,
+    "slab": "mossy_stone_brick_slab"
+  },
+  {
+    "item": "cobblestone",
+    "slab_item": "cobblestone_slab",
+    "block": "smooth_stone",
+    "isBaseSlab": false,
+    "slab": "smooth_stone_slab"
+  },
+  {
+    "item": "cobblestone",
+    "stairs": "granite_stairs",
+    "slab_item": "cobblestone_slab",
+    "block": "granite",
+    "wall": "granite_wall",
+    "isBaseSlab": false,
+    "slab": "granite_slab"
+  },
+  {
+    "item": "cobblestone",
+    "stairs": "polished_granite_stairs",
+    "slab_item": "cobblestone_slab",
+    "block": "polished_granite",
+    "isBaseSlab": false,
+    "slab": "polished_granite_slab"
+  },
+  {
+    "item": "cobblestone",
+    "stairs": "diorite_stairs",
+    "slab_item": "cobblestone_slab",
+    "block": "diorite",
+    "wall": "diorite_wall",
+    "isBaseSlab": false,
+    "slab": "diorite_slab"
+  },
+  {
+    "item": "cobblestone",
+    "stairs": "polished_diorite_stairs",
+    "slab_item": "cobblestone_slab",
+    "block": "polished_diorite",
+    "isBaseSlab": false,
+    "slab": "polished_diorite_slab"
+  },
+  {
+    "item": "cobblestone",
+    "stairs": "andesite_stairs",
+    "slab_item": "cobblestone_slab",
+    "block": "andesite",
+    "wall": "andesite_wall",
+    "isBaseSlab": false,
+    "slab": "andesite_slab"
+  },
+  {
+    "item": "cobblestone",
+    "stairs": "polished_andesite_stairs",
+    "slab_item": "cobblestone_slab",
+    "block": "polished_andesite",
+    "isBaseSlab": false,
+    "slab": "polished_andesite_slab"
+  },
+  {
+    "item": "cobbled_deepslate",
+    "stairs": "cobbled_deepslate_stairs",
+    "slab_item": "cobbled_deepslate_slab",
+    "block": "cobbled_deepslate",
+    "wall": "cobbled_deepslate_wall",
+    "isBaseSlab": true,
+    "slab": "cobbled_deepslate_slab"
+  },
+  {
+    "item": "cobbled_deepslate",
+    "stairs": "polished_deepslate_stairs",
+    "slab_item": "cobbled_deepslate_slab",
+    "block": "polished_deepslate",
+    "wall": "polished_deepslate_wall",
+    "isBaseSlab": false,
+    "slab": "polished_deepslate_slab"
+  },
+  {
+    "item": "cobbled_deepslate",
+    "stairs": "deepslate_brick_stairs",
+    "slab_item": "cobbled_deepslate_slab",
+    "block": "deepslate_bricks",
+    "wall": "deepslate_brick_wall",
+    "isBaseSlab": false,
+    "slab": "deepslate_brick_slab"
+  },
+  {
+    "item": "cobbled_deepslate",
+    "stairs": "deepslate_tile_stairs",
+    "slab_item": "cobbled_deepslate_slab",
+    "block": "deepslate_tiles",
+    "wall": "deepslate_tile_wall",
+    "isBaseSlab": false,
+    "slab": "deepslate_tile_slab"
+  },
+  {
+    "item": "tuff",
+    "stairs": "tuff_stairs",
+    "slab_item": "tuff_slab",
+    "block": "tuff",
+    "wall": "tuff_wall",
+    "isBaseSlab": true,
+    "slab": "tuff_slab"
+  },
+  {
+    "item": "tuff",
+    "stairs": "polished_tuff_stairs",
+    "slab_item": "tuff_slab",
+    "block": "polished_tuff",
+    "wall": "polished_tuff_wall",
+    "isBaseSlab": false,
+    "slab": "polished_tuff_slab"
+  },
+  {
+    "item": "tuff",
+    "stairs": "tuff_brick_stairs",
+    "slab_item": "tuff_slab",
+    "block": "tuff_bricks",
+    "wall": "tuff_brick_wall",
+    "isBaseSlab": false,
+    "slab": "tuff_brick_slab"
+  },
+  {
+    "item": "sandstone",
+    "stairs": "sandstone_stairs",
+    "slab_item": "sandstone_slab",
+    "block": "sandstone",
+    "wall": "sandstone_wall",
+    "isBaseSlab": true,
+    "slab": "sandstone_slab"
+  },
+  {
+    "item": "sandstone",
+    "stairs": "smooth_sandstone_stairs",
+    "slab_item": "sandstone_slab",
+    "block": "smooth_sandstone",
+    "isBaseSlab": false,
+    "slab": "smooth_sandstone_slab"
+  },
+  {
+    "item": "sandstone",
+    "slab_item": "sandstone_slab",
+    "block": "cut_sandstone",
+    "isBaseSlab": false,
+    "slab": "cut_sandstone_slab"
+  },
+  {
+    "item": "red_sandstone",
+    "stairs": "red_sandstone_stairs",
+    "slab_item": "red_sandstone_slab",
+    "block": "red_sandstone",
+    "wall": "red_sandstone_wall",
+    "isBaseSlab": true,
+    "slab": "red_sandstone_slab"
+  },
+  {
+    "item": "red_sandstone",
+    "stairs": "smooth_red_sandstone_stairs",
+    "slab_item": "red_sandstone_slab",
+    "block": "smooth_red_sandstone",
+    "isBaseSlab": false,
+    "slab": "smooth_red_sandstone_slab"
+  },
+  {
+    "item": "red_sandstone",
+    "slab_item": "red_sandstone_slab",
+    "block": "cut_red_sandstone",
+    "isBaseSlab": false,
+    "slab": "cut_red_sandstone_slab"
+  },
+  {
+    "item": "prismarine",
+    "stairs": "prismarine_stairs",
+    "slab_item": "prismarine_slab",
+    "block": "prismarine",
+    "wall": "prismarine_wall",
+    "isBaseSlab": true,
+    "slab": "prismarine_slab"
+  },
+  {
+    "item": "prismarine",
+    "stairs": "prismarine_brick_stairs",
+    "slab_item": "prismarine_slab",
+    "block": "prismarine_bricks",
+    "isBaseSlab": false,
+    "slab": "prismarine_brick_slab"
+  },
+  {
+    "item": "nether_bricks",
+    "stairs": "nether_brick_stairs",
+    "slab_item": "nether_brick_slab",
+    "block": "nether_bricks",
+    "wall": "nether_brick_wall",
+    "fence": "nether_brick_fence",
+    "isBaseSlab": true,
+    "slab": "nether_brick_slab"
+  },
+  {
+    "item": "blackstone",
+    "stairs": "blackstone_stairs",
+    "slab_item": "blackstone_slab",
+    "block": "blackstone",
+    "wall": "blackstone_wall",
+    "isBaseSlab": true,
+    "slab": "blackstone_slab"
+  },
+  {
+    "item": "blackstone",
+    "stairs": "polished_blackstone_stairs",
+    "slab_item": "blackstone_slab",
+    "block": "polished_blackstone",
+    "wall": "polished_blackstone_wall",
+    "isBaseSlab": false,
+    "slab": "polished_blackstone_slab"
+  },
+  {
+    "item": "blackstone",
+    "stairs": "polished_blackstone_brick_stairs",
+    "slab_item": "blackstone_slab",
+    "block": "polished_blackstone_bricks",
+    "wall": "polished_blackstone_brick_wall",
+    "isBaseSlab": false,
+    "slab": "polished_blackstone_brick_slab"
+  },
+  {
+    "item": "end_stone",
+    "stairs": "end_stone_brick_stairs",
+    "slab_item": "end_stone_brick_slab",
+    "block": "end_stone_bricks",
+    "wall": "end_stone_brick_wall",
+    "isBaseSlab": true,
+    "slab": "end_stone_brick_slab"
+  },
+  {
+    "item": "purpur_block",
+    "stairs": "purpur_stairs",
+    "slab_item": "purpur_slab",
+    "block": "purpur_block",
+    "isBaseSlab": true,
+    "slab": "purpur_slab"
+  },
+  {
+    "item": "quartz_block",
+    "stairs": "quartz_stairs",
+    "slab_item": "quartz_slab",
+    "block": "quartz_block",
+    "isBaseSlab": true,
+    "slab": "quartz_slab"
+  },
+  {
+    "item": "quartz_block",
+    "stairs": "smooth_quartz_stairs",
+    "slab_item": "quartz_slab",
+    "block": "smooth_quartz",
+    "isBaseSlab": false,
+    "slab": "smooth_quartz_slab"
+  },
+  {
+    "item": "copper_block",
+    "stairs": "cut_copper_stairs",
+    "slab_item": "cut_copper_slab",
+    "block": "cut_copper",
+    "isBaseSlab": true,
+    "slab": "cut_copper_slab"
+  },
+  {
+    "item": "exposed_copper",
+    "stairs": "exposed_cut_copper_stairs",
+    "slab_item": "exposed_cut_copper_slab",
+    "block": "exposed_cut_copper",
+    "isBaseSlab": true,
+    "slab": "exposed_cut_copper_slab"
+  },
+  {
+    "item": "weathered_copper",
+    "stairs": "weathered_cut_copper_stairs",
+    "slab_item": "weathered_cut_copper_slab",
+    "block": "weathered_cut_copper",
+    "isBaseSlab": true,
+    "slab": "weathered_cut_copper_slab"
+  },
+  {
+    "item": "oxidized_copper",
+    "stairs": "oxidized_cut_copper_stairs",
+    "slab_item": "oxidized_cut_copper_slab",
+    "block": "oxidized_cut_copper",
+    "isBaseSlab": true,
+    "slab": "oxidized_cut_copper_slab"
+  },
+  {
+    "item": "waxed_copper_block",
+    "stairs": "waxed_cut_copper_stairs",
+    "slab_item": "waxed_cut_copper_slab",
+    "block": "waxed_cut_copper",
+    "isBaseSlab": true,
+    "slab": "waxed_cut_copper_slab"
+  },
+  {
+    "item": "waxed_exposed_copper",
+    "stairs": "waxed_exposed_cut_copper_stairs",
+    "slab_item": "waxed_exposed_cut_copper_slab",
+    "block": "waxed_exposed_cut_copper",
+    "isBaseSlab": true,
+    "slab": "waxed_exposed_cut_copper_slab"
+  },
+  {
+    "item": "waxed_weathered_copper",
+    "stairs": "waxed_weathered_cut_copper_stairs",
+    "slab_item": "waxed_weathered_cut_copper_slab",
+    "block": "waxed_weathered_cut_copper",
+    "isBaseSlab": true,
+    "slab": "waxed_weathered_cut_copper_slab"
+  },
+  {
+    "item": "waxed_oxidized_copper",
+    "stairs": "waxed_oxidized_cut_copper_stairs",
+    "slab_item": "waxed_oxidized_cut_copper_slab",
+    "block": "waxed_oxidized_cut_copper",
+    "isBaseSlab": true,
+    "slab": "waxed_oxidized_cut_copper_slab"
+  },
+  {
+    "item": "bamboo_planks",
+    "stairs": "bamboo_stairs",
+    "slab_item": "bamboo_slab",
+    "block": "bamboo_planks",
+    "fence": "bamboo_fence",
+    "isBaseSlab": true,
+    "slab": "bamboo_slab"
+  },
+  {
+    "item": "bamboo_planks",
+    "stairs": "bamboo_mosaic_stairs",
+    "slab_item": "bamboo_slab",
+    "block": "bamboo_mosaic",
+    "isBaseSlab": false,
+    "slab": "bamboo_mosaic_slab"
+  },
+  {
+    "item": "dark_prismarine",
+    "stairs": "dark_prismarine_stairs",
+    "slab_item": "dark_prismarine_slab",
+    "block": "dark_prismarine",
+    "isBaseSlab": true,
+    "slab": "dark_prismarine_slab"
+  },
+  {
+    "item": "red_nether_bricks",
+    "stairs": "red_nether_brick_stairs",
+    "slab_item": "red_nether_brick_slab",
+    "block": "red_nether_bricks",
+    "wall": "red_nether_brick_wall",
+    "isBaseSlab": true,
+    "slab": "red_nether_brick_slab"
+  },
+  {
+    "item": "bricks",
+    "stairs": "brick_stairs",
+    "slab_item": "brick_slab",
+    "block": "bricks",
+    "wall": "brick_wall",
+    "isBaseSlab": true,
+    "slab": "brick_slab"
+  },
+  {
+    "item": "oak_planks",
+    "stairs": "oak_stairs",
+    "slab_item": "oak_slab",
+    "block": "oak_planks",
+    "fence": "oak_fence",
+    "isBaseSlab": true,
+    "slab": "oak_slab"
+  },
+  {
+    "item": "spruce_planks",
+    "stairs": "spruce_stairs",
+    "slab_item": "spruce_slab",
+    "block": "spruce_planks",
+    "fence": "spruce_fence",
+    "isBaseSlab": true,
+    "slab": "spruce_slab"
+  },
+  {
+    "item": "birch_planks",
+    "stairs": "birch_stairs",
+    "slab_item": "birch_slab",
+    "block": "birch_planks",
+    "fence": "birch_fence",
+    "isBaseSlab": true,
+    "slab": "birch_slab"
+  },
+  {
+    "item": "jungle_planks",
+    "stairs": "jungle_stairs",
+    "slab_item": "jungle_slab",
+    "block": "jungle_planks",
+    "fence": "jungle_fence",
+    "isBaseSlab": true,
+    "slab": "jungle_slab"
+  },
+  {
+    "item": "acacia_planks",
+    "stairs": "acacia_stairs",
+    "slab_item": "acacia_slab",
+    "block": "acacia_planks",
+    "fence": "acacia_fence",
+    "isBaseSlab": true,
+    "slab": "acacia_slab"
+  },
+  {
+    "item": "dark_oak_planks",
+    "stairs": "dark_oak_stairs",
+    "slab_item": "dark_oak_slab",
+    "block": "dark_oak_planks",
+    "fence": "dark_oak_fence",
+    "isBaseSlab": true,
+    "slab": "dark_oak_slab"
+  },
+  {
+    "item": "mangrove_planks",
+    "stairs": "mangrove_stairs",
+    "slab_item": "mangrove_slab",
+    "block": "mangrove_planks",
+    "fence": "mangrove_fence",
+    "isBaseSlab": true,
+    "slab": "mangrove_slab"
+  },
+  {
+    "item": "cherry_planks",
+    "stairs": "cherry_stairs",
+    "slab_item": "cherry_slab",
+    "block": "cherry_planks",
+    "fence": "cherry_fence",
+    "isBaseSlab": true,
+    "slab": "cherry_slab"
+  },
+  {
+    "item": "crimson_planks",
+    "stairs": "crimson_stairs",
+    "slab_item": "crimson_slab",
+    "block": "crimson_planks",
+    "fence": "crimson_fence",
+    "isBaseSlab": true,
+    "slab": "crimson_slab"
+  },
+  {
+    "item": "warped_planks",
+    "stairs": "warped_stairs",
+    "slab_item": "warped_slab",
+    "block": "warped_planks",
+    "fence": "warped_fence",
+    "isBaseSlab": true,
+    "slab": "warped_slab"
+  }
+]

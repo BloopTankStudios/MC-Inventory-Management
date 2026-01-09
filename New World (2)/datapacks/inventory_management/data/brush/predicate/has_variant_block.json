@@ -1,0 +1,96 @@
+{
+    "condition": "minecraft:all_of",
+    "terms": [
+      {
+        "condition": "minecraft:any_of",
+        "terms": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "slots": {
+                "container.*": {
+                  "items": "#brush:variant_item",
+                  "predicates": {
+                    "minecraft:custom_data": {
+                      "variant_item": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "slots": {
+                "weapon.offhand": {
+                  "items": "#brush:variant_item",
+                  "predicates": {
+                    "minecraft:custom_data": {
+                      "variant_item": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "slots": {
+                "player.cursor": {
+                  "items": "#brush:variant_item",
+                  "predicates": {
+                    "minecraft:custom_data": {
+                      "variant_item": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "condition": "minecraft:any_of",
+        "terms": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "slots": {
+                  "weapon.offhand": {
+                    "items": "minecraft:brush"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "slots": {
+                  "weapon.mainhand": {
+                    "items": "#brush:variant_item",
+                    "predicates": {
+                      "minecraft:custom_data": {
+                        "variant_item": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
