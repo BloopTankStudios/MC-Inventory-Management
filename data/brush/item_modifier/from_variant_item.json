@@ -1,8 +1,23 @@
 [
   {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "predicates": {
+        "minecraft:custom_data": {
+          "has_slab": false
+        }
+      }
+    },
+    "modifier": {
+      "function": "minecraft:set_components",
+      "components": {
+        "!minecraft:custom_data": {}
+      }
+    }
+  },
+  {
     "function": "minecraft:set_components",
     "components": {
-      "!minecraft:custom_data": {},
       "minecraft:lore": [],
       "!minecraft:can_break": {}
     }

@@ -27,12 +27,16 @@ void setup()
       //Generate Loot Tables
       generateLootTable(blocks.getJSONObject(i));
       
-      //Generate Functions
+      //Generate GUI/Brush Functions
       generateGUIFunction(blocks.getJSONObject(i));
+      
+      //Generate Break/Save states
+      generateSaveStates(blocks.getJSONObject(i));
     }
   }
   
   GUIFunctionsDone();
+  finishSaveStates();
   
   //Generate Cut Functions including place doubleslabs, 2 slabs to full block in inventory, and un-stonecutting
   generateCutFunctions(cutBlockRegistery);
@@ -44,13 +48,13 @@ void setup()
 }
 
 //Useful function for reading and modifying templates
-String stringReplace(String str, String from, String to)
+String stringReplace(String str, String from, String to_)
 {
   String output = "";
   String[] brokenStr = split(str, from);
   
   for (int i = 0; i < brokenStr.length - 1; i++)
-    output += brokenStr[i] + to;
+    output += brokenStr[i] + to_;
   output += brokenStr[brokenStr.length - 1];
   
   return output;

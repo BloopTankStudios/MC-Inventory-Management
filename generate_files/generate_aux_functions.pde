@@ -1,9 +1,13 @@
 
+String[] allLogTypes = new String[] { "oak", "spruce", "birch", "jungle", "acacia", "dark_oak", "mangrove", "cherry", "crimson", "warped", "bamboo"};
+
+
 // Generate Function Files that may be tedious but do not have a variant list
 void generateAuxFiles()
 {
   resetConsumables();
   resetVariantBlocks();
+  woodRecipes();
 }
 
 void resetConsumables()
@@ -49,7 +53,7 @@ void resetVariantBlocks()
   functionFile.println("advancement revoke @s only brush:has_variant_block");
   functionFile.println();
   
-  String function = "execute if items entity @s PLAYER_SLOT #brush:variant_item[custom_data] run return run item modify entity @s PLAYER_SLOT brush:from_variant_item";
+  String function = "execute if items entity @s PLAYER_SLOT #brush:variant_item[custom_data] run return run function brush:inventory/reset_variant_blocks_slot {slot:\"PLAYER_SLOT\"}";
   
   functionFile.println(stringReplace(function, "PLAYER_SLOT", "player.cursor"));
   functionFile.println(stringReplace(function, "PLAYER_SLOT", "weapon.offhand"));
@@ -59,4 +63,44 @@ void resetVariantBlocks()
     
   functionFile.flush();
   functionFile.close();
+}
+
+void woodRecipes()
+{
+  BufferedReader recipeTemplate = createReader("./templates/wood_hanging_sign.json");
+  
+  PrintWriter[] woodRecipe = new PrintWriter[allLogTypes.length];
+  
+  for (int i = 0; i < allLogTypes.length; i++)
+    woodRecipe[i] = createWriter("../data/minecraft/recipe/" + allLogTypes[i] + "_hanging_sign.json");
+  
+    //Read, Replace ID's, Write
+  
+  String line;
+
+  try
+  {
+    //Read
+    while ((line = recipeTemplate.readLine()) != null) {
+      for (int i = 0; i < allLogTypes.length; i++)
+      {
+        //Modify & Write
+        woodRecipe[i].println(stringReplace(line, "wood", allLogTypes[i]));
+      }
+    }
+    
+    //Close Reader/Writer
+    recipeTemplate.close();
+  }
+  catch (IOException e)
+  {
+    e.printStackTrace();
+  }
+  
+  for (int i = 0; i < allLogTypes.length; i++)
+  {
+    woodRecipe[i].flush();
+    woodRecipe[i].close();
+  }
+
 }

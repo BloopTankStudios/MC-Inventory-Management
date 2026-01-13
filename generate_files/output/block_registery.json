@@ -133,7 +133,7 @@
       }],
       "special_case": [
         {
-          "use": "brush",
+          "use": "water_bottle",
           "sound": "block.stone.place",
           "converts_to": "gravel"
         },
@@ -157,7 +157,7 @@
       }],
       "special_case": [
         {
-          "use": "brush",
+          "use": "water_bottle",
           "sound": "block.stone.place",
           "converts_to": "gravel"
         },
@@ -286,7 +286,7 @@
       "water_to_waxed": ["polished_granite"],
       "stonecutter": {"blocks": ["granite_stairs"]},
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "block.stone.place",
         "converts_to": "diorite"
       }]
@@ -296,7 +296,7 @@
       "water_to_waxed": ["polished_granite"],
       "stonecutter": {"blocks": ["granite_stairs"]},
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "block.stone.place",
         "converts_to": "diorite"
       }]
@@ -325,7 +325,7 @@
       "stonecutter": {"blocks": ["diorite_stairs"]},
       "special_case": [
         {
-          "use": "brush",
+          "use": "water_bottle",
           "sound": "block.stone.place",
           "converts_to": "andesite"
         },
@@ -342,7 +342,7 @@
       "stonecutter": {"blocks": ["diorite_stairs"]},
       "special_case": [
         {
-          "use": "brush",
+          "use": "water_bottle",
           "sound": "block.stone.place",
           "converts_to": "andesite"
         },
@@ -377,7 +377,7 @@
       "stonecutter": {"blocks": ["andesite_stairs"]},
       "special_case": [
         {
-          "use": "brush",
+          "use": "water_bottle",
           "sound": "block.stone.place",
           "converts_to": "cobblestone"
         },
@@ -394,7 +394,7 @@
       "stonecutter": {"blocks": ["andesite_stairs"]},
       "special_case": [
         {
-          "use": "brush",
+          "use": "water_bottle",
           "sound": "block.stone.place",
           "converts_to": "cobblestone"
         },
@@ -663,7 +663,7 @@
       "water_to_waxed": ["cut_sandstone"],
       "stonecutter": {"blocks": ["sandstone_stairs"]},
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "",
         "converts_to": "sand"
       }]
@@ -676,7 +676,7 @@
       "water_to_waxed": ["cut_sandstone"],
       "stonecutter": {"blocks": ["sandstone_stairs"]},
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "",
         "converts_to": "sand"
       }]
@@ -747,7 +747,7 @@
       "water_to_waxed": ["cut_red_sandstone"],
       "stonecutter": {"blocks": ["red_sandstone_stairs"]},
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "",
         "converts_to": "red_sand"
       }]
@@ -760,7 +760,7 @@
       "water_to_waxed": ["cut_red_sandstone"],
       "stonecutter": {"blocks": ["red_sandstone_stairs"]},
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "",
         "converts_to": "red_sand"
       }]
@@ -1072,7 +1072,7 @@
       "chiseled": ["purpur_pillar"],
       "stonecutter": {"blocks": ["purpur_stairs"]},
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "item.crop.plant",
         "converts_to": "end_stone_bricks"
       }]
@@ -1082,7 +1082,7 @@
       "chiseled": ["purpur_pillar"],
       "stonecutter": {"blocks": ["purpur_stairs"]},
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "item.crop.plant",
         "converts_to": "end_stone_bricks"
       }]
@@ -1252,7 +1252,7 @@
     "gui": {
       "self": "wood",
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "block.wood.place",
         "converts_to": "log"
       }]
@@ -1287,7 +1287,7 @@
       "self": "bamboo_mosaic",
       "stonecutter": {"blocks": ["bamboo_mosaic_stairs"]},
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "block.bamboo_wood.place",
         "converts_to": "bamboo_planks"
       }]
@@ -1296,7 +1296,7 @@
       "self": "bamboo_mosaic",
       "stonecutter": {"blocks": ["bamboo_mosaic_stairs"]},
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "block.bamboo_wood.place",
         "converts_to": "bamboo_planks"
       }]
@@ -1365,7 +1365,7 @@
     "convertsTo": {
       "self": "rooted_dirt",
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "block.rooted_dirt.place",
         "converts_to": "dirt"
       }]
@@ -1373,7 +1373,7 @@
     "gui": {
       "self": "rooted_dirt",
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "block.rooted_dirt.place",
         "converts_to": "dirt"
       }]
@@ -1385,7 +1385,7 @@
     "convertsTo": {
       "self": "muddy_mangrove_roots",
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "block.muddy_mangrove_roots.place",
         "converts_to": "mud"
       }]
@@ -1393,7 +1393,7 @@
     "gui": {
       "self": "muddy_mangrove_roots",
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "block.muddy_mangrove_roots.place",
         "converts_to": "mud"
       }]
@@ -1463,7 +1463,7 @@
           "converts_to": "red_sandstone"
         },
         {
-          "use": "brush",
+          "use": "water_bottle",
           "sound": "",
           "converts_to": "sand"
         }
@@ -1478,7 +1478,7 @@
           "converts_to": "red_sandstone"
         },
         {
-          "use": "brush",
+          "use": "water_bottle",
           "sound": "",
           "converts_to": "sand"
         }
@@ -1491,7 +1491,7 @@
       "self": "dark_prismarine",
       "stonecutter": {"blocks": ["dark_prismarine_stairs"]},
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "",
         "converts_to": "prismarine"
       }]
@@ -1500,7 +1500,7 @@
       "self": "dark_prismarine",
       "stonecutter": {"blocks": ["dark_prismarine_stairs"]},
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "",
         "converts_to": "prismarine"
       }]
@@ -1513,7 +1513,7 @@
       "self": "red_nether_bricks",
       "stonecutter": {"blocks": ["red_nether_brick_stairs"]},
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "block.nether_bricks.place",
         "converts_to": "nether_bricks"
       }]
@@ -1522,7 +1522,7 @@
       "self": "red_nether_bricks",
       "stonecutter": {"blocks": ["red_nether_brick_stairs"]},
       "special_case": [{
-        "use": "brush",
+        "use": "water_bottle",
         "sound": "block.nether_bricks.place",
         "converts_to": "nether_bricks"
       }]
