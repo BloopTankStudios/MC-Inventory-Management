@@ -6,7 +6,7 @@
         "player": {
           "slots": {
             "weapon.mainhand": {
-              "items": "#brush:variant_item",
+              "items": "#brush:variant_group",
               "predicates": {
                 "minecraft:custom_data": {}
               }

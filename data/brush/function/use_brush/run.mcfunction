@@ -17,7 +17,7 @@ execute unless data storage bs:out raycast.targeted_block run return fail
 data modify entity B5-0-0-0-1 Pos set from storage bs:out raycast.targeted_block
 
 # Save Variant Block
-execute if items entity @s weapon.mainhand #brush:variant_item at B5-0-0-0-1 run return run function brush:use_brush/save_block
+execute if items entity @s weapon.mainhand #brush:variant_group at B5-0-0-0-1 run return run function brush:use_brush/save_block
 
 # Try to Replace Block
 execute if entity @s[predicate=brush:is_sneaking, predicate=brush:has_stonecutter] at B5-0-0-0-1 if block ~ ~ ~ #brush:stonecut_block run return run function brush:use_brush/shift_stonecut

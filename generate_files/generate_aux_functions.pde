@@ -53,7 +53,7 @@ void resetVariantBlocks()
   functionFile.println("advancement revoke @s only brush:has_variant_block");
   functionFile.println();
   
-  String function = "execute if items entity @s PLAYER_SLOT #brush:variant_item[custom_data] run return run function brush:inventory/reset_variant_blocks_slot {slot:\"PLAYER_SLOT\"}";
+  String function = "execute if items entity @s PLAYER_SLOT #brush:variant_group[custom_data] run return run function brush:inventory/reset_variant_blocks_slot {slot:\"PLAYER_SLOT\"}";
   
   functionFile.println(stringReplace(function, "PLAYER_SLOT", "player.cursor"));
   functionFile.println(stringReplace(function, "PLAYER_SLOT", "weapon.offhand"));

@@ -25,11 +25,471 @@
   {
     "function": "minecraft:filtered",
     "item_filter": {
-      "items": "#brush:cobblestone_variant"
+      "items": "#brush:group/dark_oak_log_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:dark_oak_log"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/red_sandstone_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:red_sandstone"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/prismarine_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:prismarine"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/weathered_copper_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:weathered_copper"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/waxed_exposed_copper_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:waxed_exposed_copper"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/crimson_stem_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:crimson_stem"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/crimson_planks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:crimson_planks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/oxidized_copper_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:oxidized_copper"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/sandstone_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:sandstone"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/bamboo_planks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:bamboo_planks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/basalt_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:basalt"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/cobblestone_variant"
     },
     "modifier": {
       "function": "minecraft:set_item",
       "item": "minecraft:cobblestone"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/end_stone_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:end_stone"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/spruce_planks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:spruce_planks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/quartz_block_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:quartz_block"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/copper_block_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:copper_block"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/jungle_log_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:jungle_log"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/cobbled_deepslate_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:cobbled_deepslate"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/nether_bricks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:nether_bricks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/red_nether_bricks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:red_nether_bricks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/spruce_log_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:spruce_log"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/birch_log_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:birch_log"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/carved_pumpkin_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:carved_pumpkin"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/bricks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:bricks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/birch_planks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:birch_planks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/oak_planks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:oak_planks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/dirt_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:dirt"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/dark_oak_planks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:dark_oak_planks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/purpur_block_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:purpur_block"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/exposed_copper_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:exposed_copper"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/mangrove_log_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:mangrove_log"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/warped_stem_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:warped_stem"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/acacia_planks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:acacia_planks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/mangrove_planks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:mangrove_planks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/cherry_planks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:cherry_planks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/end_stone_bricks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:end_stone_bricks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/waxed_oxidized_copper_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:waxed_oxidized_copper"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/cherry_log_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:cherry_log"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/dark_prismarine_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:dark_prismarine"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/oak_log_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:oak_log"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/jungle_planks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:jungle_planks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/tuff_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:tuff"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/waxed_weathered_copper_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:waxed_weathered_copper"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/acacia_log_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:acacia_log"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/waxed_copper_block_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:waxed_copper_block"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/warped_planks_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:warped_planks"
+    }
+  },
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/blackstone_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:blackstone"
     }
   }
 ]

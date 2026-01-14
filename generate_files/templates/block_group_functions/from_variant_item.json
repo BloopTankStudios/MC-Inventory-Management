@@ -1,0 +1,37 @@
+[
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "predicates": {
+        "minecraft:custom_data": {
+          "has_slab": false
+        }
+      }
+    },
+    "modifier": {
+      "function": "minecraft:set_components",
+      "components": {
+        "!minecraft:custom_data": {}
+      }
+    }
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:lore": [],
+      "!minecraft:can_break": {}
+    }
+  },
+<--
+  {
+    "function": "minecraft:filtered",
+    "item_filter": {
+      "items": "#brush:group/BLOCK_variant"
+    },
+    "modifier": {
+      "function": "minecraft:set_item",
+      "item": "minecraft:BLOCK"
+    }
+  },
+-->
+]
